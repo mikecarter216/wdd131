@@ -51,12 +51,18 @@ main {
     text-align: center;
 }
 
+.card img {
+    max-width: 50%; /* Reduces the image size to 80% of the container width */
+    height: auto; /* Maintains the aspect ratio */
+    margin: 0 auto; /* Centers the image */
+    display: block; /* Makes the image block-level */
+}
+
 footer {
     background-color: #7d1111;
     color: rgba(0, 175, 111, 0.774);
     text-align: center;
     padding: 10px;
-    width: 100%;
+    width: 80%;
     position: relative; /* Instead of absolute */
 }
-

@@ -52,7 +52,7 @@ main {
 }
 
 .card img {
-    max-width: 50%; /* Reduces the image size to 80% of the container width */
+    width: 150px; /* Sets the image to a fixed width */
     height: auto; /* Maintains the aspect ratio */
     margin: 0 auto; /* Centers the image */
     display: block; /* Makes the image block-level */
@@ -63,6 +63,6 @@ footer {
     color: rgba(0, 175, 111, 0.774);
     text-align: center;
     padding: 10px;
-    width: 80%;
+    width: 100%;
     position: relative; /* Instead of absolute */
 }

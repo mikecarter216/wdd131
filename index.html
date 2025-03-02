@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio page for Michael AKpan  for WDD 11 - Dynamic Web Fundamentals course">
+    <meta name="description" content="Portfolio page for Michael Akpan for WDD 131 - Dynamic Web Fundamentals course">
     <meta name="author" content="Michael Akpan">
     <link rel="stylesheet" href="/styles/base.css">
     <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -18,7 +18,6 @@
             <ul>
                 <li>
                     <a href="https://www.linkedin.com/in/michael-akpan-326b132b9" target="_blank">LinkedIn</a>
-
                 </li>
                 <li>
                     <a href="https://byupw.instructure.com/">Canvas</a>
@@ -27,7 +26,7 @@
                     <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm" target="_blank">Scripture</a>
                 </li>
                 <li>
-                    <a href="">Final Project</a>
+                    <a href="#">Final Project</a>
                 </li>
             </ul>
         </nav>
@@ -39,17 +38,15 @@
                 <h3>About Me</h3>
             </div>
             <div class="card-content">
-                <img src="images/mike.jpg" alt="Michael Akpan" >    
+                <img src="images/mike.jpg" alt="Michael Akpan">    
                 <p>
-                    My name is Michael Akpan, and I am deeply passionate about web development an am currently studying Software Development in Brigham Young University (BYUI) . I thrive on learning new technologies, pushing the boundaries of innovation, and turning creative ideas into functional, dynamic websites. Coding is more than just a skill to me it’s an exciting journey of problem-solving and continuous growth. I enjoy exploring the latest trends in technology and sharing my knowledge with others, fostering a community where learning and collaboration thrive. With every project, I aim to build solutions that are not only efficient but also impactful.
+                    My name is Michael Akpan, and I am deeply passionate about web development and am currently studying Software Development at Brigham Young University–Idaho (BYU–Idaho). I thrive on learning new technologies, pushing the boundaries of innovation, and turning creative ideas into functional, dynamic websites. Coding is more than just a skill to me—it’s an exciting journey of problem-solving and continuous growth. I enjoy exploring the latest trends in technology and sharing my knowledge with others, fostering a community where learning and collaboration thrive. With every project, I aim to build solutions that are not only efficient but also impactful.
                 </p>
-
                 <div class="country-container">
                     <h3>Nigeria</h3>
                     <div class="country">
                         <img src="images/Nigeria flag.png" alt="Official Flag of Nigeria">
                         <p>Nigeria is a country in West Africa known for its rich culture, diverse languages, and vibrant tech ecosystem. It is home to Nollywood, one of the largest film industries in the world.</p>
-                        
                     </div>
                 </div>
             </div>
@@ -76,21 +73,17 @@
                     <li>
                         <a href="https://www.udemy.com" target="_blank">Udemy</a>
                     </li>
-                    <li>
-                        <a href="#">Image Placeholder</a>
-                    </li>
                 </ul>
             </div>
         </section>
     </main>
-
     <footer>
         <p>&copy;2025 - Michael Akpan - Nigeria</p>
         <p>Last Modification: <span id="lastModified"></span></p>
     </footer>
-    
     <script>
-        document.getElementById("lastModified").textContent = document.lastModified;
+        const lastModified = new Date(document.lastModified);
+        document.getElementById("lastModified").textContent = `Last Modified: ${lastModified.toLocaleDateString()} ${lastModified.toLocaleTimeString()}`;
     </script>
 </body>
 </html>

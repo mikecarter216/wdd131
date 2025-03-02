@@ -6,8 +6,8 @@
 }
 
 :root {
-    --white: #28d205e0;
-    --primary-blue:rgb(148, 65, 10);
+    --white: #ffffff;
+    --primary-blue: rgb(10, 65, 148);
     --secondary-blue: #0f0fd1d6;
     --red: #e4200fc5;
 }
@@ -84,7 +84,7 @@ main .card .card-heading {
 main .card-heading h3 {
     color: var(--white);
     font-size: 18px;
-    font-family: 'Monserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     text-align: center;
 }
 main .card .card-content {
@@ -99,7 +99,7 @@ main .card-content p {
 }
 main .card-content img {
     float: right;
-    width: 80px;
+    width: 200px;
     height: auto;
     object-fit: cover;
 }
@@ -117,7 +117,7 @@ main .country-container h3 {
 }
 main .country-container img {
     float: left;
-    width: 80px;
+    width: 200px;
     height: auto;
     object-fit: cover;
     margin: 0px 10px;

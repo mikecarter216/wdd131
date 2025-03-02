@@ -6,10 +6,10 @@
 }
 
 :root {
-    --white: #FFF;
-    --primary-blue: #45454f;
-    --secondary-blue: #81818d;
-    --red: #f33422;
+    --white: #28d205e0;
+    --primary-blue: #a5531b;
+    --secondary-blue: #0f0fd1d6;
+    --red: #e4200fc5;
 }
 
 header {

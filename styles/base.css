@@ -5,7 +5,32 @@
     box-sizing: border-box;
 }
 
+<<<<<<< HEAD
 body {
+=======
+:root {
+    --white: #ffffff;
+    --primary-blue: rgb(10, 65, 148);
+    --secondary-blue: #0f0fd1d6;
+    --red: #e4200fc5;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+}
+header .top-header {
+    background-color: var(--primary-blue);
+    padding: 20px;
+}
+header .top-header .name {
+    color: var(--red);
+}
+header .top-header h1 {
+    color: var(--white);
+    font-size: 20px;
+    text-align: center;
+>>>>>>> c09451776feb57ce0e4edb4cb327006501d72ae0
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
@@ -88,13 +113,59 @@ main {
 
 .card-content figure img {
     width: 100%;
+<<<<<<< HEAD
+=======
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+main .card-heading h3 {
+    color: var(--white);
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+main .card .card-content {
+    padding: 20px;
+}
+main .card-content p {
+    font-size: 15px;
+    line-height: 22px;
+    text-align: left;
+    font-family: 'Figtree', sans-serif;
+    color: var(--primary-blue);
+}
+main .card-content img {
+    float: right;
+    width: 200px;
+>>>>>>> c09451776feb57ce0e4edb4cb327006501d72ae0
     height: auto;
     border-radius: 8px;
 }
+<<<<<<< HEAD
 
 .card-content figcaption {
     margin-top: 10px;
     font-size: 1.2em;
+=======
+main .card-content .country-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+main .country-container h3 {
+    font-family: 'Figtree', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+main .country-container img {
+    float: left;
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+    margin: 0px 10px;
+>>>>>>> c09451776feb57ce0e4edb4cb327006501d72ae0
 }
 
 /* Footer Styles */

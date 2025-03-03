@@ -1,135 +1,116 @@
+/* Global styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
 }
 
-:root {
-    --white: #ffffff;
-    --primary-blue: rgb(10, 65, 148);
-    --secondary-blue: #0f0fd1d6;
-    --red: #e4200fc5;
-}
-
-header {
-    display: flex;
-    flex-direction: column;
-}
-header .top-header {
-    background-color: var(--primary-blue);
-    padding: 20px;
-}
-header .top-header .name {
-    color: var(--red);
-}
-header .top-header h1 {
-    color: var(--white);
-    font-size: 20px;
-    text-align: center;
+body {
     font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
 }
-header nav {
-    padding: 20px 50px;
-    background-color: var(--secondary-blue);
+
+/* Header Styles */
+header {
+    background-color: #0077b6;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+header .top-header h1 {
+    font-size: 2.5em;
+}
+
+nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-header nav ul {
-    width: 100%;
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-}
-header nav ul a {
-    text-decoration: none;
-    color: var(--white);
-    font-family: 'Figtree', sans-serif;
-    font-size: 16px;
-}
-header nav ul a:hover {
-    color: var(--red);
+    list-style: none;
+    background-color: #005f7f;
+    padding: 10px;
+    margin-top: 10px;
 }
 
+nav ul li {
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    padding: 10px;
+}
+
+nav a:hover {
+    background-color: #004f75;
+    border-radius: 5px;
+}
+
+/* Main Content Styles */
 main {
+    padding: 20px;
+}
+
+.card {
+    margin: 20px 0;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-heading {
+    background-color: #0077b6;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+}
+
+.card-heading h3 {
+    font-size: 1.8em;
+}
+
+.card-content {
+    padding: 20px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: stretch;
-    gap: 20px;
-    padding: 50px;
+    justify-content: space-around;
 }
-main .card {
-    flex: 2;
-    border: solid 1px var(--primary-blue);
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+
+.card-content figure {
+    margin: 10px;
+    width: 30%;
+    text-align: center;
 }
-main .card.web-resources {
-    flex: 1;
-}
-main .card .card-heading {
-    background-color: var(--primary-blue);
-    padding: 10px;
+
+.card-content figure img {
     width: 100%;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-}
-main .card-heading h3 {
-    color: var(--white);
-    font-size: 18px;
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
-}
-main .card .card-content {
-    padding: 20px;
-}
-main .card-content p {
-    font-size: 15px;
-    line-height: 22px;
-    text-align: left;
-    font-family: 'Figtree', sans-serif;
-    color: var(--primary-blue);
-}
-main .card-content img {
-    float: right;
-    width: 200px;
     height: auto;
-    object-fit: cover;
+    border-radius: 8px;
 }
-main .card-content .country-container {
-    display: flex;
-    flex-direction: column;
-    margin-top: 30px;
+
+.card-content figcaption {
+    margin-top: 10px;
+    font-size: 1.2em;
 }
-main .country-container h3 {
-    font-family: 'Figtree', sans-serif;
-    font-size: 20px;
-    text-align: center;
-    text-decoration: underline;
-    margin-bottom: 20px;
-}
-main .country-container img {
-    float: left;
-    width: 200px;
-    height: auto;
-    object-fit: cover;
-    margin: 0px 10px;
-}
+
+/* Footer Styles */
 footer {
-    background-color: var(--primary-blue);
-    width: 100%;
-    padding: 20px;
-}
-footer p {
-    color: var(--white);
-    font-size: 15px;
-    font-family: 'Montserrat', sans-serif;
     text-align: center;
+    padding: 15px;
+    background-color: #0077b6;
+    color: white;
+    margin-top: 20px;
+}
+
+footer p {
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+footer #lastModified {
+    font-weight: bold;
 }

@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio page for Michael Akpan for WDD 131 - Dynamic Web Fundamentals course">
+    <meta name="description" content="Portfolio page for Michael Akpan for WDD 131 - Dynamic Web Fundamentals course. Showcasing web development skills, resources, and personal background.">
     <meta name="author" content="Michael Akpan">
     <link rel="stylesheet" href="styles/base.css">
     <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>WDD 131: Home Page</title>
+    <title>WDD 131: Home Page - Michael Akpan</title>
 </head>
 <body>
     <header>
@@ -16,32 +16,31 @@
         </div>
         <nav>
             <ul>
-                <li><a href="https://www.linkedin.com/in/michael-akpan-326b132b9" target="_blank">LinkedIn</a></li>
-                <li><a href="https://byupw.instructure.com/">Canvas</a></li>
-                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm" target="_blank">Scripture</a></li>
+                <li><a href="https://www.linkedin.com/in/michael-akpan-326b132b9" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                <li><a href="https://byupw.instructure.com/" target="_blank" rel="noopener noreferrer">Canvas</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm" target="_blank" rel="noopener noreferrer">Scripture</a></li>
                 <li><a href="#">Final Project</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
         <section class="content">
             <section class="card about-me">
                 <div class="card-heading">About Me</div>
                 <div class="card-content">
-                    <p>My name is Michael Akpan, and I am deeply passionate about web development. I am currently pursuing <strong>Software Development at Brigham Young University–Idaho (BYU–Idaho)</strong>. 
-                        I enjoy learning new technologies, exploring innovative ideas, and creating dynamic, user-friendly websites. 
-                        Coding is my passion, and I strive to build impactful digital solutions....</p>
-                    <img src="images/mike.jpg" alt="Michael Akpan" class="profile-img">
+                    <p>My name is Michael Akpan, and I am deeply passionate about web development. I am currently pursuing <strong>Software Development at Brigham Young University–Idaho (BYU–Idaho)</strong>. I enjoy learning new technologies, exploring innovative ideas, and creating dynamic, user-friendly websites. Coding is my passion, and I strive to build impactful digital solutions....</p>
+                    <img src="images/mike.jpg" alt="Michael Akpan, passionate web developer" class="profile-img">
                     <div class="country-container">
                         <h3>Nigeria</h3>
                         <div class="country">
                             <img src="images/Nigeria flag.png" alt="Official Flag of Nigeria" class="flag">
-                            <p>Nigeria, located in West Africa, is known for its rich culture, diverse languages, and booming tech industry. 
-                                It is home to Nollywood, one of the world's largest film industries, and a growing hub for technology startups....</p>
+                            <p>Nigeria, located in West Africa, is known for its rich culture, diverse languages, and booming tech industry. It is home to Nollywood, one of the world's largest film industries, and a growing hub for technology startups....</p>
                         </div>
                     </div>
                 </div>
             </section>
+
             <section class="card web-resources">
                 <div class="card-heading">Web Dev Resources</div>
                 <ul>
@@ -54,11 +53,18 @@
             </section>
         </section>
     </main>
+
     <footer>
-        <p>&copy;2025 - Michael Akpan - Nigeria</p>
+        <p>&copy;<span id="currentYear"></span> - Michael Akpan - Nigeria</p>
         <p>Last Modification: <span id="lastModified"></span></p>
     </footer>
+
     <script>
+        // Populate current year dynamically
+        const currentYear = new Date().getFullYear();
+        document.getElementById("currentYear").textContent = currentYear;
+
+        // Display last modification date dynamically
         const lastModified = new Date(document.lastModified);
         document.getElementById("lastModified").textContent = `Last Modified: ${lastModified.toLocaleDateString()} ${lastModified.toLocaleTimeString()}`;
     </script>

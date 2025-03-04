@@ -13,7 +13,7 @@ body {
 
 /* Header */
 header {
-    background-color: rgb(88, 1, 181);
+    background-color: rgb(90, 15, 130);
     color: white;
     padding: 1em;
     text-align: left;
@@ -31,11 +31,21 @@ header nav ul li {
     margin-right: 20px;
 }
 
+/* Navigation Links */
 header nav a {
     color: white;
     text-decoration: none;
+    position: relative; /* To allow hover effects without layout shifts */
+    padding: 5px 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth background color and scaling transition */
 }
 
+header nav a:hover {
+    background-color: #555; /* Subtle hover background */
+    transform: scale(1.05); /* Slight scale-up effect for hover */
+}
+
+/* Hamburger Button */
 .hamburger {
     display: block;
 }
@@ -73,13 +83,13 @@ figure {
 
 figcaption {
     font-size: 0.9em;
-    color: rgb(81, 5, 163);
+    color: rgb(87, 14, 164);
     margin-top: 5px;
 }
 
 /* Footer */
 footer {
-    background-color: rgba(59, 3, 147, 0.886);
+    background-color: rgba(34, 6, 86, 0.886);
     color: rgb(245, 242, 247);
     padding: 1em;
     text-align: center;

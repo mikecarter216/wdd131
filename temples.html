@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,13 +12,17 @@
     <script defer src="scripts/temples.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
         <div class="header">
             <h1>Temple Album</h1>
         </div>
         <nav>
-            <ul>
+            <!-- Hamburger Button -->
+            <button class="hamburger" id="hamburgerBtn">&#9776;</button>
+            <!-- Navigation links -->
+            <ul id="navList">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Old</a></li>
                 <li><a href="#">New</a></li>
@@ -26,6 +31,7 @@
             </ul>
         </nav>
     </header>
+
     <main>
         <h2>Home</h2>
         <div class="gallery">
@@ -67,13 +73,25 @@
             </figure>
         </div>
     </main>
+
     <footer>
         <p>&copy; 2025 - Michael Akpan - Nigeria</p>
         <p>Last Modification: <span id="lastModified"></span></p>
     </footer>
+
     <script>
+        // Toggle the mobile menu when the hamburger button is clicked
+        const hamburgerBtn = document.getElementById("hamburgerBtn");
+        const navList = document.getElementById("navList");
+
+        hamburgerBtn.addEventListener("click", () => {
+            navList.classList.toggle("active");  // Toggle the 'active' class
+        });
+
+        // Display the last modified date
         const lastModified = new Date(document.lastModified);
         document.getElementById("lastModified").textContent = `Last Modified: ${lastModified.toLocaleDateString()} ${lastModified.toLocaleTimeString()}`;
     </script>
 </body>
+
 </html>

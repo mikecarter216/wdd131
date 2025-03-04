@@ -1,61 +1,29 @@
-/* Global styles */
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'montserrat', sans-serif;
 }
 
-<<<<<<< HEAD
 body {
-=======
-:root {
-    --white: #ffffff;
-    --primary-blue: rgb(10, 65, 148);
-    --secondary-blue: #0f0fd1d6;
-    --red: #e4200fc5;
+    background-color: #d6bebe;
+    color: #333;
 }
 
 header {
-    display: flex;
-    flex-direction: column;
-}
-header .top-header {
-    background-color: var(--primary-blue);
-    padding: 20px;
-}
-header .top-header .name {
-    color: var(--red);
-}
-header .top-header h1 {
-    color: var(--white);
-    font-size: 20px;
+    background-color: #0a4194;
+    color: rgb(219, 64, 12);
+    padding: 15px;
     text-align: center;
->>>>>>> c09451776feb57ce0e4edb4cb327006501d72ae0
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-}
-
-/* Header Styles */
-header {
-    background-color: #0077b6;
-    color: white;
-    padding: 10px;
-    text-align: center;
-}
-
-header .top-header h1 {
-    font-size: 2.5em;
 }
 
 nav ul {
     display: flex;
     justify-content: center;
-    align-items: center;
     list-style: none;
-    background-color: #005f7f;
+    background-color: #333;
     padding: 10px;
-    margin-top: 10px;
 }
 
 nav ul li {
@@ -64,124 +32,96 @@ nav ul li {
 
 nav a {
     text-decoration: none;
-    color: white;
+    color: rgb(156, 62, 62);
     font-size: 1.2em;
     padding: 10px;
 }
 
 nav a:hover {
-    background-color: #004f75;
+    background-color: #555;
     border-radius: 5px;
 }
 
-/* Main Content Styles */
-main {
+/* Main Content Layout */
+.content {
+    display: flex;
+    justify-content: space-between;
     padding: 20px;
+    max-width: 1100px;
+    margin: auto;
 }
 
-.card {
-    margin: 20px 0;
-    background-color: white;
+.about-me {
+    flex: 2;
+    background: rgba(141, 23, 23, 0.58);
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.web-resources {
+    flex: 1;
+    background: rgb(233, 175, 220);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+}
+
 .card-heading {
-    background-color: #0077b6;
-    color: white;
+    font-size: 1.5em;
+    color: rgb(6, 183, 33);
+    background-color: #0a4194;
     padding: 10px;
     text-align: center;
     border-radius: 10px 10px 0 0;
 }
 
-.card-heading h3 {
-    font-size: 1.8em;
-}
-
 .card-content {
     padding: 20px;
+}
+
+.profile-img {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.card-content figure {
-    margin: 10px;
-    width: 30%;
-    text-align: center;
-}
-
-.card-content figure img {
-    width: 100%;
-<<<<<<< HEAD
-=======
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-}
-main .card-heading h3 {
-    color: var(--white);
-    font-size: 18px;
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
-}
-main .card .card-content {
-    padding: 20px;
-}
-main .card-content p {
-    font-size: 15px;
-    line-height: 22px;
-    text-align: left;
-    font-family: 'Figtree', sans-serif;
-    color: var(--primary-blue);
-}
-main .card-content img {
-    float: right;
-    width: 200px;
->>>>>>> c09451776feb57ce0e4edb4cb327006501d72ae0
+    width: 150px;
     height: auto;
-    border-radius: 8px;
+    margin: 15px auto;
+    border-radius: 50%;
 }
-<<<<<<< HEAD
 
-.card-content figcaption {
-    margin-top: 10px;
-    font-size: 1.2em;
-=======
-main .card-content .country-container {
+/* Nigeria Flag & Text */
+.country {
     display: flex;
-    flex-direction: column;
-    margin-top: 30px;
-}
-main .country-container h3 {
-    font-family: 'Figtree', sans-serif;
-    font-size: 20px;
-    text-align: center;
-    text-decoration: underline;
-    margin-bottom: 20px;
-}
-main .country-container img {
-    float: left;
-    width: 200px;
-    height: auto;
-    object-fit: cover;
-    margin: 0px 10px;
->>>>>>> c09451776feb57ce0e4edb4cb327006501d72ae0
-}
-
-/* Footer Styles */
-footer {
-    text-align: center;
-    padding: 15px;
-    background-color: #0077b6;
-    color: white;
+    align-items: center;
+    gap: 15px;
     margin-top: 20px;
 }
 
-footer p {
-    font-size: 1em;
-    margin: 5px 0;
+.flag {
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
 }
 
-footer #lastModified {
+.web-resources ul {
+    list-style: none;
+    padding: 10px;
+}
+
+.web-resources li a {
+    text-decoration: none;
+    color: #0a4194;
     font-weight: bold;
+}
+
+.web-resources li a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #0a4194;
+    color: rgb(239, 34, 34);
+    margin-top: 20px;
 }

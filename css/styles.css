@@ -1,118 +1,105 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Global Styles */
+:root {
+    --primary-color: #086441;
+    --secondary-color: #f6f6f5;
+    --header-bg: #0f6522;
+    --footer-bg: #096324;
+    --box-bg: rgba(255, 255, 255, 0.9);
+    --text-color: #333;
 }
 
 body {
+    margin: 0;
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f5eeee;
-    color: #bcacac;
-    height: 100%;
-}
-
-header {
-    background-color: #0b6627;
-    color: rgb(231, 225, 225);
+    background-color: #f4f4f4;
+    color: var(--text-color);
     text-align: center;
-    padding: 2rem;
-    width: 100%;
 }
 
-h1 {
-    font-size: 2.5rem;
+/* Header */
+header {
+    background-color: var(--header-bg);
+    color: white;
+    padding: 20px;
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 10px solid var(--primary-color);
 }
 
-main {
-    position: relative;
-    height: 100vh;
-}
-
+/* Hero Section */
 .hero {
     position: relative;
-    top: 50;
     width: 100%;
-    height: 100vh;
+    height: 60vh;
     overflow: hidden;
-    background-image: url('images/nigeria hero.jpg');
-    background-size: cover; /* Ensures the image covers the entire area */
-    background-position: center center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents tiling */
 }
+
 .hero img {
     width: 100%;
-    height: 100%;
+    height: 250%;
     object-fit: cover;
-    object-position: center top;
     display: block;
 }
 
-.info {
+/* Overlay - Holds Data & Weather Boxes */
+.overlay {
     position: absolute;
     top: 50%;
-    left: 0;
-    width: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 100%; /* Ensures full section coverage */
     display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    transform: translateY(-50%);
+    justify-content: space-between; /* Keeps Data on left and Weather on right */
+    align-items: flex-start; /* Align items to the start of the container */
 }
 
-.data {
-    width: 34%;
-    padding: 10px;
-    color: rgb(25, 9, 9);
-    background-color: rgba(225, 233, 228, 0.8);
-    border-radius: 5px;
-    border-bottom: 1px solid #1b8e43;
+/* Info Box Styles */
+.info-box {
+    background-color: var(--box-bg);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    width: 250px;  /* Makes it square */
+    height: 250px; /* Ensures the square shape */
+    text-align: left;
+    position: absolute;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    overflow: hidden;
-    margin-top: 60px;
+    justify-content: center;
 }
 
-.data h2 {
-    background-color: #04521c;
+/* Title Bar for Data & Weather */
+.title {
+    background-color: var(--primary-color);
     color: white;
-    padding: 3px;
+    padding: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: absolute;
+    top: -18px;
+    left: 15px;
     border-radius: 5px;
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-    width: fit-content;
 }
 
+/* Data Box Positioning (Top Left) */
+.data {
+    top: 5%; /* Moves it to the top */
+    left: none; /* Moves it to the left */
+}
+
+/* Weather Box Positioning (Bottom Right) */
 .weather {
-    width: 25%;
-    padding: 10px;
-    background-color: rgba(227, 230, 228, 0.8);
-    color: rgb(31, 16, 16);
-    border-radius: 5px;
-    border-top: 1px solid #0cf05c;
-    margin-top: 80px;
-    align-self: flex-end;
+    bottom: 1%; /* Moves it to the bottom */
+    right: 1%; /* Moves it to the right */
 }
 
-.weather h2 {
-    background-color: #075b21;
-    color: rgb(230, 222, 222);
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    width: fit-content;
-}
-
-.weather-icon {
-    font-size: 1.5rem;
-}
-
+/* Footer */
 footer {
-    background-color: hsla(130, 90%, 20%, 0.963);
+    background-color: var(--footer-bg);
     color: white;
+    padding: 20px;
+    font-size: 14px;
     text-align: center;
-    padding: 1rem;
-    position: relative;
-    margin-top: 20px;
 }

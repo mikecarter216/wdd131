@@ -8,19 +8,18 @@
     <script src="js/script.js" defer></script>
 </head>
 <body>
+    <!-- Header -->
     <header>
         <h1>Nigeria</h1>
     </header>
-    <main>
-        <section class="hero">
-            <picture>
-                <source srcset="images/nigeria hero.jpg" type="image/jpg">
-                <img src="images/nigeria hero.jpg" alt="Beautiful landscape of Nigeria">
-            </picture>
-        </section>
-        <section class="info">
-            <div class="data">
-                <h2>Data</h2>
+
+    <!-- Hero Image -->
+    <section class="hero">
+        <img src="images/nigeria hero.jpg" alt="Beautiful landscape of Nigeria">
+        <div class="overlay">
+            <!-- Data Section -->
+            <div class="info-box data">
+                <div class="title">Data</div>
                 <ul>
                     <li><strong>Area:</strong> 923,768 sq km</li>
                     <li><strong>Population:</strong> 223,804,632</li>
@@ -32,8 +31,10 @@
                     <li><strong>Internet TLD:</strong> .ng</li>
                 </ul>
             </div>
-            <div class="weather">
-                <h2>Weather <span class="weather-icon">⛅</span></h2>
+
+            <!-- Weather Section -->
+            <div class="info-box weather">
+                <div class="title">Weather ⛅</div>
                 <ul>
                     <li><strong>Temperature:</strong> <span id="temperature">32</span>°C</li>
                     <li><strong>Conditions:</strong> Sunny</li>
@@ -41,18 +42,13 @@
                     <li><strong>Wind Chill:</strong> <span id="windChill">N/A</span>°C</li>
                 </ul>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 - Michael Akpan - Nigeria</p>
+        <p>© <span id="year"></span> 🌸 Michael Akpan 🌸 Nigeria</p>
         <p>Last Modification: <span id="lastModified"></span></p>
     </footer>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const lastModified = new Date(document.lastModified);
-            document.getElementById("lastModified").textContent = `${lastModified.toLocaleDateString()} ${lastModified.toLocaleTimeString()}`;
-        });
-    </script>
 </body>
 </html>

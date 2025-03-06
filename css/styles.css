@@ -1,9 +1,9 @@
 /* Global Styles */
 :root {
-    --primary-color: #086441;
-    --secondary-color: #f6f6f5;
-    --header-bg: #0f6522;
-    --footer-bg: #096324;
+    --primary-color: #008753;
+    --secondary-color: #f4a900;
+    --header-bg: #087b41;
+    --footer-bg: #075725;
     --box-bg: rgba(255, 255, 255, 0.9);
     --text-color: #333;
 }
@@ -37,7 +37,7 @@ header {
 
 .hero img {
     width: 100%;
-    height: 250%;
+    height: 300%;
     object-fit: cover;
     display: block;
 }
@@ -46,10 +46,10 @@ header {
 .overlay {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 45%;
     transform: translate(-50%, -50%);
-    width: 90%;
-    height: 100%; /* Ensures full section coverage */
+    width: 100%;
+    height: 95%; /* Ensures full section coverage */
     display: flex;
     justify-content: space-between; /* Keeps Data on left and Weather on right */
     align-items: flex-start; /* Align items to the start of the container */
@@ -62,7 +62,7 @@ header {
     border-radius: 8px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
     width: 250px;  /* Makes it square */
-    height: 250px; /* Ensures the square shape */
+    height: 230px; /* Ensures the square shape */
     text-align: left;
     position: absolute;
     display: flex;
@@ -74,19 +74,19 @@ header {
 .title {
     background-color: var(--primary-color);
     color: white;
-    padding: 12px;
+    padding: 5px;
     font-weight: bold;
     text-transform: uppercase;
     position: absolute;
-    top: -18px;
-    left: 15px;
-    border-radius: 5px;
+    top: 10px;
+    left: 0px;
+    border-radius: 3px;
 }
 
 /* Data Box Positioning (Top Left) */
 .data {
     top: 5%; /* Moves it to the top */
-    left: none; /* Moves it to the left */
+    left: 4%; /* Moves it to the left */
 }
 
 /* Weather Box Positioning (Bottom Right) */

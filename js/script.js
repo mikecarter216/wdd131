@@ -1,29 +1,110 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Get elements
-    const temperatureElement = document.getElementById("temperature");
-    const windSpeedElement = document.getElementById("windSpeed");
-    const windChillElement = document.getElementById("windChill");
-    const yearElement = document.getElementById("year");
-    const lastModifiedElement = document.getElementById("lastModified");
+// Array of temples with image URLs and other details
+const temples = [
+  {
+    templeName: "Aba Nigeria",
+    location: "Aba, Nigeria",
+    dedicated: "2005, August, 7",
+    area: 11500,
+    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/aba-nigeria/400x250/aba-nigeria-temple-lds-273999-wallpaper.jpg"
+  },
+  {
+    templeName: "Manti Utah",
+    location: "Manti, Utah, United States",
+    dedicated: "1888, May, 21",
+    area: 74792,
+    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/manti-utah/400x250/manti-temple-768192-wallpaper.jpg"
+  },
+  {
+    templeName: "Payson Utah",
+    location: "Payson, Utah, United States",
+    dedicated: "2015, June, 7",
+    area: 96630,
+    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x225/payson-utah-temple-exterior-1416671-wallpaper.jpg"
+  },
+  {
+    templeName: "Yigo Guam",
+    location: "Yigo, Guam",
+    dedicated: "2020, May, 2",
+    area: 6861,
+    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/yigo-guam/400x250/yigo_guam_temple_2.jpg"
+  },
+  {
+    templeName: "Washington D.C.",
+    location: "Kensington, Maryland, United States",
+    dedicated: "1974, November, 19",
+    area: 156558,
+    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/washington-dc/400x250/washington_dc_temple-exterior-2.jpeg"
+  },
+  {
+    templeName: "Lima Perú",
+    location: "Lima, Perú",
+    dedicated: "1986, January, 10",
+    area: 9600,
+    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/lima-peru/400x250/lima-peru-temple-evening-1075606-wallpaper.jpg"
+  },
+  {
+    templeName: "Mexico City Mexico",
+    location: "Mexico City, Mexico",
+    dedicated: "1983, December, 2",
+    area: 116642,
+    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
+  },
+];
+function createTempleCards(templesArray) {
+  const container = document.getElementById('temple-cards-container');
+  container.innerHTML = '';
 
-    // Static values
-    const temperature = parseFloat(temperatureElement.textContent);
-    const windSpeed = parseFloat(windSpeedElement.textContent);
+  templesArray.forEach(temple => {
+    const card = document.createElement('div');
+    card.classList.add('temple-card');
+    
+    const templeImage = document.createElement('img');
+    templeImage.src = temple.imageUrl;
+    templeImage.alt = temple.templeName;
+    templeImage.loading = 'lazy';
+    card.innerHTML = `
+      <h3>${temple.templeName}</h3>
+      <p><strong>Location:</strong> ${temple.location}</p>
+      <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
+      <p><strong>Area:</strong> ${temple.area} sq. ft.</p>
+    `;
 
-    // Wind Chill Calculation Function
-    function calculateWindChill(temp, wind) {
-        if (temp <= 10 && wind > 4.8) {
-            return (13.12 + 0.6215 * temp - 11.37 * Math.pow(wind, 0.16) + 0.3965 * temp * Math.pow(wind, 0.16)).toFixed(1);
-        }
-        return "N/A";
-    }
+    card.prepend(templeImage);
 
-    // Update Wind Chill
-    windChillElement.textContent = calculateWindChill(temperature, windSpeed);
+    container.appendChild(card);
+  });
+}
 
-    // Update Footer Year
-    yearElement.textContent = new Date().getFullYear();
+function filterTemples(criteria) {
+  let filteredTemples = [];
 
-    // Update Last Modified Date
-    lastModifiedElement.textContent = document.lastModified;
-});
+  switch (criteria) {
+    case 'Old':
+      filteredTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() < 1900);
+      break;
+    case 'New':
+      filteredTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() > 2000);
+      break;
+    case 'Large':
+      filteredTemples = temples.filter(temple => temple.area > 90000);
+      break;
+    case 'Small':
+      filteredTemples = temples.filter(temple => temple.area < 10000);
+      break;
+    case 'Home':
+      filteredTemples = temples;
+      break;
+    default:
+      filteredTemples = temples;
+  }
+
+  createTempleCards(filteredTemples);
+}
+
+createTempleCards(temples);
+
+document.getElementById('filter-old').addEventListener('click', () => filterTemples('Old'));
+document.getElementById('filter-new').addEventListener('click', () => filterTemples('New'));
+document.getElementById('filter-large').addEventListener('click', () => filterTemples('Large'));
+document.getElementById('filter-small').addEventListener('click', () => filterTemples('Small'));
+document.getElementById('filter-home').addEventListener('click', () => filterTemples('Home'));

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Filtered Temples</title>
+        <!-- Link to the CSS file in the css folder -->
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+<body>
+    <header>
+        <h1>Temple Picture Album</h1>
+        <nav>
+            <ul><!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Filtered Temples</title>
+                    <link rel="stylesheet" href="css/styles.css">
+                </head>
+                <body>
+                    <header>
+                        <nav>
+                            <button id="filter-home">Home</button>
+                            <button id="filter-old">Old Temples (Before 1990)</button>
+                            <button id="filter-new">New Temples (After 2000)</button>
+                            <button id="filter-large">Large Temples ( > 90,000 sqft)</button>
+                            <button id="filter-small">Small Temples ( < 10,000 sqft)</button>
+                        </nav>
+                    </header>
+                
+                    <main>
+                        <div id="temple-cards-container"></div>
+                    </main>
+                
+                    <footer>
+                        <p>&copy; <span id="current-year"></span> | Last Modified: <span id="last-modified"></span></p>
+                    </footer>
+                
+                    <script src="js/script.js" defer></script>
+                </body>
+                </html>
+                
+                <li><button id="all">Home</button></li>
+                <li><button id="old">Old</button></li>
+                <li><button id="new">New</button></li>
+                <li><button id="large">Large</button></li>
+                <li><button id="small">Small</button></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="temple-cards-container"></section>
+    </main>
+    <footer>
+        <p>&copy;<span id="currentYear"></span> - Michael Akpan - Nigeria</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+    <script>
+        // Function to filter temples based on criteria
+        function filterTemples(filterType) {
+            // Implement filtering logic based on filterType
+            console.log(`Filtering temples by: ${filterType}`);
+        }
+
+        // Add event listeners for buttons
+        document.getElementById('filter-old').addEventListener('click', () => filterTemples('Old'));
+        document.getElementById('filter-new').addEventListener('click', () => filterTemples('New'));
+        document.getElementById('filter-large').addEventListener('click', () => filterTemples('Large'));
+        document.getElementById('filter-small').addEventListener('click', () => filterTemples('Small'));
+        document.getElementById('filter-home').addEventListener('click', () => filterTemples('Home'));
+
+        // Setting the current year and last modified date dynamically
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        document.getElementById('last-modified').textContent = document.lastModified;
+    </script>
+    <script src="script.js" defer></script>
+</body>
+</html>

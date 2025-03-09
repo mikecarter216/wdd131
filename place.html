@@ -13,7 +13,11 @@
     </header>
 
     <section class="hero">
-        <img src="images/nigeria hero.jpg" alt="Beautiful landscape of Nigeria">
+        <picture>
+            <source srcset="images/nigeria hero.webp" type="image/webp">
+            <source srcset="images/nigeria hero.jpg" type="image/jpeg">
+            <img src="images/nigeria hero.jpg" alt="Beautiful landscape of Nigeria">
+        </picture>
         <div class="overlay">
             <div class="info-box data">
                 <div class="title">Data</div>
@@ -30,7 +34,7 @@
             </div>
 
             <div class="info-box weather">
-                <div class="title">Weather ⛅</div>
+                <div class="title">Weather <span class="weather-icon">🌤️</span></div>
                 <ul>
                     <li><strong>Temperature:</strong> <span id="temperature">32</span>°C</li>
                     <li><strong>Conditions:</strong> Sunny</li>
@@ -46,4 +50,4 @@
         <p>Last Modification: <span id="lastModified"></span></p>
     </footer>
 </body>
-</html
+</html>

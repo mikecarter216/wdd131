@@ -1,113 +1,49 @@
-/* Basic reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* General styling */
+/* styles.css */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
-/* Header and navigation styling */
 header {
-    text-align: center;
-    margin-bottom: 20px;
-    width: 100%;
-}
-
-nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-nav button {
-    padding: 10px 20px;
-    background-color: #5cb85c;
+    background-color: #c8102e;
     color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
-}
-
-nav button:hover {
-    background-color: #4cae4c;
-}
-
-/* Main content styling */
-main {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    width: 100%;
-}
-
-.temple-card {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    width: 250px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 15px;
-    transition: transform 0.3s ease;
-}
-
-.temple-card:hover {
-    transform: scale(1.05);
-}
-
-.temple-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-.temple-card h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
+    font-size: 24px;
     font-weight: bold;
 }
 
-.temple-card p {
-    font-size: 14px;
-    color: #555;
+.hero {
+    background-color: #007a33;
+    padding: 5;
 }
 
-/* Footer styling */
-footer {
-    text-align: center;
-    margin-top: 40px;
+.hero-image {
     width: 100%;
+    height: auto;
+    max-height: 500px; /* Increased height for bigger image */
 }
 
-footer p {
+.info {
+    padding: 20px;
+}
+
+.data, .weather {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px; /* Reduced padding to remove the dots effect */
+    margin: 0; /* Removed margin to prevent unwanted spacing */
+}
+
+.weather-icon {
+    font-size: 100px;
+}
+
+footer {
+    background-color: #c8102e;
+    color: white;
+    padding: 20px;
     font-size: 14px;
-    color: #888;
-}
-
-/* Responsiveness for smaller screens */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .temple-card {
-        width: 100%;
-        max-width: 300px;
-    }
 }

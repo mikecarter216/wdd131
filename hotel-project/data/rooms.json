@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Luxury Suite",
+        "price": "$250/night",
+        "image": "images/room1.jpg",
+        "description": "Spacious suite with a panoramic view of the city."
+    },
+    {
+        "name": "Standard Room",
+        "price": "$150/night",
+        "image": "images/room2.jpg",
+        "description": "Comfortable room with all essential amenities."
+    }
+]

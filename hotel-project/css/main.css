@@ -1,0 +1,181 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #bc0b95;
+}
+
+header, footer {
+    background-color: #0f0693;
+    color: rgb(255, 253, 253);
+    padding: 15px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.hero {
+    text-align: center;
+    background-image: url('images/hotel.jpg');
+    background-size: cover;
+    background-position: center center;
+    padding: 50px 0;
+    color: rgb(250, 244, 244);
+}
+
+.cta-btn {
+    background-color: #61c510;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.feature-card {
+    background-color: rgb(242, 4, 4);
+    padding: 20px;
+    border-radius: 8px;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(253, 252, 252, 0.966);
+    margin-bottom: 20px;
+}
+
+.feature-card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.feature-card h3 {
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.feature-card p {
+    color: #fefafa;
+}
+
+.room-list {
+    padding: 30px;
+    text-align: center;
+}
+
+.room-card {
+    background-color: rgb(242, 15, 15);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    width: 30%;
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(248, 246, 246, 0.941);
+    color: rgb(232, 229, 229);
+}
+
+.room-card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.room-card h3 {
+    margin: 10px 0;
+    font-size: 22px;
+}
+
+.room-card p {
+    font-size: 16px;
+    color: #ddd;
+}
+
+.gallery {
+    padding: 30px;
+    text-align: center;
+}
+
+.gallery h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    background-color: #ea0c0c;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(248, 247, 247, 0.975);
+    text-align: center;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(247, 246, 246, 0.961);
+}
+
+.gallery-item p {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #f3ecec;
+}
+
+footer {
+    background-color: #0606a0;
+    color: rgb(239, 229, 229);
+    padding: 15px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .features, .room-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-card, .room-card {
+        width: 80%;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .cta-btn {
+        width: 100%;
+        padding: 15px 0;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .gallery-item {
+        width: 90%;
+    }
+}

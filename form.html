@@ -5,23 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Review</title>
     <link rel="stylesheet" href="styles/form.css">
-    <style>
-        .rating input {
-            display: none;
-        }
-        .rating label {
-            font-size: 30px;
-            color: #1c1616;
-            cursor: pointer;
-        }
-        .rating input:checked ~ label {
-            color: gold;
-        }
-        .rating label:hover,
-        .rating label:hover ~ label {
-            color: gold;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -54,17 +37,23 @@
 
             <fieldset>
                 <legend>Which features did you find useful in the product? <em>(Check all that apply)</em></legend>
-                <input type="checkbox" id="durability" name="features" value="Durability">
-                <label for="durability">Durability</label>
+                <div class="checkbox-group">
+                    <label for="durability">
+                        <input type="checkbox" id="durability" name="features" value="Durability"> Durability
+                    </label>
 
-                <input type="checkbox" id="ease-of-use" name="features" value="Ease of Use">
-                <label for="ease-of-use">Ease of Use</label>
+                    <label for="ease-of-use">
+                        <input type="checkbox" id="ease-of-use" name="features" value="Ease of Use"> Ease of Use
+                    </label>
 
-                <input type="checkbox" id="performance" name="features" value="Performance">
-                <label for="performance">Performance</label>
+                    <label for="performance">
+                        <input type="checkbox" id="performance" name="features" value="Performance"> Performance
+                    </label>
 
-                <input type="checkbox" id="design" name="features" value="Design">
-                <label for="design">Design</label>
+                    <label for="design">
+                        <input type="checkbox" id="design" name="features" value="Design"> Design
+                    </label>
+                </div>
             </fieldset>
 
             <label for="review">Written Review <span>(Optional)</span></label>
@@ -73,7 +62,7 @@
             <label for="user-name">Your Name <span>(Optional)</span></label>
             <input type="text" id="user-name" name="user-name" placeholder="Enter your name">
 
-            <button type="submit">Post Review</button>
+            <input type="submit" value="Post Review">
         </form>
     </main>
 

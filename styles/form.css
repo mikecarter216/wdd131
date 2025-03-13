@@ -1,61 +1,51 @@
-/* General Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #d3c2d5;
-    color: #0b0a0a;
-    margin: 0;
+    margin: 10px;
     padding: 0;
+    background-color: #a88eac;
+    color: #070707;
+}
+
+header {
+    background-color: #330d2f;
+    color: white;
+    padding: 0px;
     text-align: center;
 }
 
-h1 {
-    background-color: #811290;
-    color: white;
-    padding: 20px 0;
-    margin: 0;
-}
-
-/* Form Container */
-.form-container {
-    background-color: #d3c2d5;
-    width: 90%;
-    max-width: 500px;
+main {
+    padding: 30px;
+    max-width: 800px;
     margin: 0 auto;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Form Fields */
-label {
-    display: block;
-    margin: 10px 0 5px;
-    font-weight: bold;
-    text-align: left;
-}
-
-select, input, textarea {
-    width: 100%;
-    padding: 8px;
+label, textarea, input, select {
     margin-bottom: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 16px;
+    width: 100%;
+    padding: 5px;
+    border: 0px solid #ccc;
+    box-sizing: border-box;
 }
 
-/* Star Rating */
 .rating {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    max-width: 250px;
+    margin-bottom: 20px;
 }
+
+.rating input {
+    display: none;
+}
+
 .rating label {
-    font-size: 24px;
+    font-size: 30px;
+    color: #db6262;
     cursor: pointer;
 }
 
-input[type="radio"] {
-    display: none;
+.rating input:checked ~ label {
+    color: gold;
 }
 
 .rating label:hover,
@@ -63,43 +53,78 @@ input[type="radio"] {
     color: gold;
 }
 
-/* Checkboxes */
+fieldset {
+    border: none;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-weight: bold;
+}
+
 .checkbox-group {
+    position: relative;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0px;
+    flex-wrap: wrap;
 }
 
 .checkbox-group label {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    position: relative;
+    display: inline-block;
+    font-size: 14px;
+    padding-left: 20px;
 }
 
 .checkbox-group input[type="checkbox"] {
-    margin-right: 10px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    pointer-events: none;
 }
 
-/* Submit Button */
-button {
-    background-color: white;
-    color: black;
+.checkbox-group label:before {
+    content: '\2610';
     font-size: 18px;
-    padding: 10px;
-    border: none;
-    width: 100%;
-    cursor: pointer;
-    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #ccc;
 }
 
-button:hover {
-    background-color: #bcaeae;
+.checkbox-group input[type="checkbox"]:checked + label:before {
+    content: '\2611';
+    color: #75be1c;
 }
 
-/* Footer */
 footer {
-    background-color: #811290;
+    background-color: #45163e;
     color: white;
-    padding: 15px;
-    font-size: 14px;
+    text-align: center;
+    padding: 10px;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    label, input, select, textarea {
+        width: 100%;
+    }
+
+    .rating {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .checkbox-group {
+        flex-direction: column;
+    }
 }

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nigeria</title>
     <link rel="stylesheet" href="css/styles.css">
-    <script src="js/script.js" defer></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
@@ -14,9 +14,9 @@
 
     <div class="hero">
         <picture>
-            <source srcset="images/nigeria-hero.webp" type="image/webp">
-            <source srcset="images/nigeria-hero.jpg" type="image/jpeg">
-            <img src="images/nigeria-hero.jpg" alt="Beautiful landscape of Nigeria">
+            <source srcset="images/nigeria-hero-small.webp" type="image/webp">
+            <source srcset="images/nigeria-hero-large.webp" type="image/webp">
+            <img src="images/nigeria-hero-large.jpg" alt="Beautiful landscape of Nigeria">
         </picture>
         <div class="overlay">
             <div class="info-box data">
@@ -49,5 +49,9 @@
         <p>© <span id="year"></span> 🌸 Michael Akpan 🌸 Nigeria</p>
         <p>Last Modification: <span id="lastModified"></span></p>
     </footer>
+    
+    <script>
+        document.getElementById("lastModified").textContent = document.lastModified;
+    </script>
 </body>
 </html>

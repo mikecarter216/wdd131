@@ -6,12 +6,73 @@
     <title>Nigeria</title>
     <link rel="stylesheet" href="css/styles.css">
     <script src="script.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background: #a00;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+        .hero {
+            position: relative;
+            max-width: 100%;
+        }
+        .hero img {
+            width: 100%;
+            height: auto;
+        }
+        .overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .info-box {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            width: 300px;
+        }
+        .title {
+            background: #046307;
+            color: white;
+            padding: 10px;
+            border-radius: 5px 5px 0 0;
+            font-weight: bold;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        footer {
+            background: #a00;
+            color: white;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        @media (max-width: 768px) {
+            .overlay {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Nigeria</h1>
     </header>
-
     <div class="hero">
         <picture>
             <source srcset="images/nigeria-hero-small.webp" type="image/webp">
@@ -32,7 +93,6 @@
                     <li><strong>Internet TLD:</strong> .ng</li>
                 </ul>
             </div>
-
             <div class="info-box weather">
                 <div class="title">Weather <span class="weather-icon">🌤️</span></div>
                 <ul>
@@ -44,12 +104,10 @@
             </div>
         </div>
     </div>
-
     <footer>
         <p>© <span id="year"></span> 🌸 Michael Akpan 🌸 Nigeria</p>
         <p>Last Modification: <span id="lastModified"></span></p>
     </footer>
-    
     <script>
         document.getElementById("lastModified").textContent = document.lastModified;
     </script>

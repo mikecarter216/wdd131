@@ -27,14 +27,30 @@ header {
 
 .info {
     padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
 }
 
-.data, .weather {
+.data {
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    margin: 0;
+    padding: 20px;
+    width: 45%;
+    text-align: left;
+}
+
+.weather {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 45%;
+    margin-top: 20px;
+    text-align: right;
 }
 
 .weather-icon {
@@ -65,84 +81,25 @@ nav button:hover {
     background-color: #3e8640;
 }
 
-#temple-cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-.temple-card {
-    position: relative;
-    background-color: rgba(253, 250, 250, 0.669);
-    border: 1px solid #0f086d8e;
-    border-radius: 10px;
-    width: 250px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease;
-}
-
-.temple-card:hover {
-    transform: scale(1.05);
-}
-
-.temple-card img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.temple-info {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 10px;
-    text-align: center;
-    font-size: 10px;
-}
-
-.temple-info h3 {
-    font-size: 10px;
-    margin-bottom: 5px;
-}
-
-.temple-info p {
-    margin: 2px 0;
-    font-size: 12px;
-}
-
 footer {
     background-color: #0a6c30;
     color: white;
     padding: 20px;
     font-size: 14px;
     text-align: center;
-    margin-top: 10px; 
+    margin-top: 10px;
 }
 
 @media (max-width: 768px) {
-    nav {
-        flex-direction: row;
-        justify-content: center;
+    .info {
+        flex-direction: column;
+        align-items: center;
     }
-
-    nav button {
-        font-size: 14px;
-        padding: 8px 12px;
+    .data, .weather {
+        width: 90%;
+        text-align: center;
     }
-
-    .temple-card {
-        width: 100%;
-        max-width: 200px;
+    .weather {
+        margin-top: 10px;
     }
 }

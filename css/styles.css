@@ -3,19 +3,19 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    background-color: #fdf9f9;
+    background-color: #1a07c6;
 }
 
 header {
-    background-color: #066f33;
-    color: rgba(247, 244, 244, 0.97);
+    background-color: #097e3a;
+    color: rgba(254, 249, 249, 0.97);
     padding: 15px;
     font-size: 24px;
     font-weight: bold;
 }
 
 .hero {
-    background-color: #c60808d5;
+    background-color: #f70818d5;
     padding: 5px;
 }
 

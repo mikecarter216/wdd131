@@ -7,7 +7,7 @@ body {
 }
 
 header {
-    background-color: #330d2f;
+    background-color: #52094a;
     color: white;
     padding: 0px;
     text-align: center;
@@ -66,27 +66,31 @@ legend {
     position: relative;
     display: flex;
     justify-content: flex-start;
-    gap: 0px;
+    gap: 10px;
     flex-wrap: wrap;
 }
 
 .checkbox-group label {
     position: relative;
-    display: inline-block;
+    display: flex;
+    align-items: center;
     font-size: 14px;
-    padding-left: 20px;
+    padding-left: 25px;
+    cursor: pointer; /* Added for better UX */
 }
 
 .checkbox-group input[type="checkbox"] {
     position: absolute;
     left: 0;
-    top: 0;
-    opacity: 0;
-    pointer-events: none;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;  /* ✅ Make checkbox visible */
+    pointer-events: auto; /* ✅ Allow interaction */
+    width: 16px; /* ✅ Adjust width */
+    height: 16px; /* ✅ Adjust height */
 }
-
 .checkbox-group label:before {
-    content: '\2610';
+    content: '';
     font-size: 18px;
     position: absolute;
     left: 0;

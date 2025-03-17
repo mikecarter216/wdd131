@@ -21,7 +21,11 @@
     </footer>
 
     <script>
-        document.getElementById('reviewCount').textContent = localStorage.getItem('reviewCount');
+       document.addEventListener("DOMContentLoaded", function () {
+            let reviewCount = parseInt(localStorage.getItem("reviewCount") || "0", 10);
+            
+            document.getElementById("reviewCount").textContent = reviewCount;
+        });
     </script>
 </body>
 </html>

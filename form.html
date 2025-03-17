@@ -12,7 +12,7 @@
     </header>
 
     <main>
-        <form action="review.html" method="get">
+        <form action="review.html" method="get" id="reviewForm">
             <label for="product">Product Name</label>
             <select id="product" name="product" required>
                 <option value="" disabled selected>Select a Product...</option>
@@ -38,19 +38,19 @@
             <fieldset>
                 <legend>Which features did you find useful in the product? <em>(Check all that apply)</em></legend>
                 <div class="checkbox-group">
-                    <label for="durability">
+                    <label>
                         <input type="checkbox" id="durability" name="features" value="Durability"> Durability
                     </label>
-
-                    <label for="ease-of-use">
+            
+                    <label>
                         <input type="checkbox" id="ease-of-use" name="features" value="Ease of Use"> Ease of Use
                     </label>
-
-                    <label for="performance">
+            
+                    <label>
                         <input type="checkbox" id="performance" name="features" value="Performance"> Performance
                     </label>
-
-                    <label for="design">
+            
+                    <label>
                         <input type="checkbox" id="design" name="features" value="Design"> Design
                     </label>
                 </div>
@@ -71,25 +71,36 @@
         <p>Last Modified: <span id="last-modified"></span></p>
     </footer>
 
-    <script src="scripts/form.js" defer></script>
+    <script src="form.js" defer></script>
     <script>
-        const products = [
-            { id: "fc-1888", name: "flux capacitor", averagerating: 4.5 },
-            { id: "fc-2050", name: "power laces", averagerating: 4.7 },
-            { id: "fs-1987", name: "time circuits", averagerating: 3.5 },
-            { id: "ac-2000", name: "low voltage reactor", averagerating: 3.9 },
-            { id: "jj-1969", name: "warp equalizer", averagerating: 5.0 }
-        ];
+        document.addEventListener("DOMContentLoaded", () => {
+            const products = [
+                { id: "fc-1888", name: "flux capacitor", averagerating: 4.5 },
+                { id: "fc-2050", name: "power laces", averagerating: 4.7 },
+                { id: "fs-1987", name: "time circuits", averagerating: 3.5 },
+                { id: "ac-2000", name: "low voltage reactor", averagerating: 3.9 },
+                { id: "jj-1969", name: "warp equalizer", averagerating: 5.0 }
+            ];
 
-        const productSelect = document.getElementById('product');
-        products.forEach(product => {
-            const option = document.createElement('option');
-            option.value = product.id;
-            option.textContent = `${product.name} (Rating: ${product.averagerating})`;
-            productSelect.appendChild(option);
+            const productSelect = document.getElementById('product');
+            products.forEach(product => {
+                const option = document.createElement('option');
+                option.value = product.id;
+                option.textContent = `${product.name} (Rating: ${product.averagerating})`;
+                productSelect.appendChild(option);
+            });
+
+            // Update the last modified date in a readable format
+            const lastModifiedDate = new Date(document.lastModified);
+            document.getElementById('last-modified').textContent = lastModifiedDate.toLocaleString();
+
+            // Update localStorage review count when the form is submitted
+            document.getElementById("reviewForm").addEventListener("submit", () => {
+                let reviewCount = localStorage.getItem("reviewCount") || 0;
+                reviewCount = parseInt(reviewCount) + 1;
+                localStorage.setItem("reviewCount", reviewCount);
+            });
         });
-
-        document.getElementById('last-modified').textContent = document.lastModified;
     </script>
 </body>
 </html>

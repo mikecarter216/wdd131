@@ -90,11 +90,9 @@
                 productSelect.appendChild(option);
             });
 
-            // Update the last modified date in a readable format
             const lastModifiedDate = new Date(document.lastModified);
             document.getElementById('last-modified').textContent = lastModifiedDate.toLocaleString();
 
-            // Update localStorage review count when the form is submitted
             document.getElementById("reviewForm").addEventListener("submit", () => {
                 let reviewCount = localStorage.getItem("reviewCount") || 0;
                 reviewCount = parseInt(reviewCount) + 1;

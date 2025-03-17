@@ -76,7 +76,7 @@ legend {
     align-items: center;
     font-size: 14px;
     padding-left: 25px;
-    cursor: pointer; /* Added for better UX */
+    cursor: pointer;
 }
 
 .checkbox-group input[type="checkbox"] {
@@ -84,10 +84,10 @@ legend {
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    opacity: 1;  /* ✅ Make checkbox visible */
-    pointer-events: auto; /* ✅ Allow interaction */
-    width: 16px; /* ✅ Adjust width */
-    height: 16px; /* ✅ Adjust height */
+    opacity: 1;
+    pointer-events: auto;
+    width: 16px;
+    height: 16px;
 }
 .checkbox-group label:before {
     content: '';

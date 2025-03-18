@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #c108af;
+    color: #f0e4e4;
+}
+
+header {
+    background-color: #e81a1a;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+main {
+    padding: 20px;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-my-life {
+    background: rgb(3, 3, 233);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(254, 253, 253, 0.941);
+    max-width: 800px;
+    margin: auto;
+}
+
+.profile-img {
+    width: 300px;
+    border-radius: 10%;
+    margin-top: 20px;
+}
+
+.album-container {
+    margin-top: 200px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+.card {
+    background: rgb(124, 131, 160);
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-heading {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #f01818;
+    color: rgb(245, 243, 249);
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}

@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+    // Lazy loading for images
     const images = document.querySelectorAll(".gallery img");
     const options = {
         root: null,
@@ -20,6 +21,15 @@ document.addEventListener("DOMContentLoaded", () => {
         observer.observe(img);
     });
 
+    // Update the footer dynamically
     document.getElementById("currentYear").textContent = new Date().getFullYear();
     document.getElementById("lastModified").textContent = document.lastModified;
+
+    // Ensure images are displayed in a grid layout
+    const gallery = document.querySelector(".gallery");
+    if (gallery) {
+        gallery.style.display = "grid";
+        gallery.style.gridTemplateColumns = "repeat(auto-fit, minmax(150px, 1fr))";
+        gallery.style.gap = "10px";
+    }
 });

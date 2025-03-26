@@ -1,20 +1,19 @@
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #6b87d4;
+    font-family: Arial, sans-serif;
+    margin: 10px;
+    padding: 10px;
+    background-color: blueviolet;
+    text-align: center;
+    font-style: italic;
+    background-image:image-set() ;
 }
 
-header, footer {
-    background-color: #1106a6;
-    color: rgb(255, 253, 253);
+header {
+    background-color: blue;
+    color: whitesmoke;
     padding: 15px;
     text-align: center;
-}
-
-a {
-    text-decoration: none;
-    color: white;
+    font-style: italic;
 }
 
 nav ul {
@@ -34,15 +33,15 @@ nav ul li {
     background-size: cover;
     background-position: center center;
     padding: 50px 0;
-    color: rgb(250, 244, 244);
+    color: white;
 }
 
 .cta-btn {
-    background-color: #61c510;
+    background-color: limegreen;
     padding: 15px 30px;
     font-size: 18px;
     border-radius: 5px;
-    color: #333;
+    color: burlywood;
     text-transform: uppercase;
 }
 
@@ -54,11 +53,11 @@ nav ul li {
 }
 
 .feature-card {
-    background-color: rgb(242, 4, 4);
+    background-color: red;
     padding: 20px;
     border-radius: 8px;
     width: 30%;
-    box-shadow: 0 4px 8px rgba(253, 252, 252, 0.966);
+    box-shadow: 0 4px 8px white;
     margin-bottom: 20px;
 }
 
@@ -73,7 +72,7 @@ nav ul li {
 }
 
 .feature-card p {
-    color: #fefafa;
+    color: white;
 }
 
 .room-list {
@@ -82,14 +81,14 @@ nav ul li {
 }
 
 .room-card {
-    background-color: rgb(242, 15, 15);
+    background-color: red;
     padding: 20px;
     margin: 20px;
     border-radius: 8px;
     width: 30%;
     display: inline-block;
-    box-shadow: 0 4px 8px rgba(248, 246, 246, 0.941);
-    color: rgb(232, 229, 229);
+    box-shadow: 0 4px 8px white;
+    color: white;
 }
 
 .room-card img {
@@ -104,7 +103,7 @@ nav ul li {
 
 .room-card p {
     font-size: 16px;
-    color: #ddd;
+    color: whitesmoke;
 }
 
 .gallery {
@@ -124,31 +123,34 @@ nav ul li {
 }
 
 .gallery-item {
-    background-color: #ea0c0c;
+    background-color: red;
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(248, 247, 247, 0.975);
+    box-shadow: 0 4px 8px white;
     text-align: center;
+    font-style: italic;
 }
 
 .gallery-item img {
     width: 100%;
     height: auto;
     border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(247, 246, 246, 0.961);
+    box-shadow: 0 4px 8px whitesmoke;
 }
 
 .gallery-item p {
     margin-top: 10px;
     font-size: 1rem;
-    color: #f3ecec;
+    color: white;
 }
 
 footer {
-    background-color: #0606a0;
-    color: rgb(239, 229, 229);
+    background-color: blue;
+    color: white;
     padding: 15px;
     text-align: center;
+    font-style: italic;
+    font-display: style;
 }
 footer img{
     width: 25px;

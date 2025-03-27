@@ -10,9 +10,9 @@ body {
 }
 
 header {
-    background-color: blue;
-    color: whitesmoke;
-    padding: 15px;
+    background-color: rgb(250, 250, 250);
+    color: rgb(249, 248, 248);
+    padding: 15px 0;
     text-align: center;
     font-style: bold;
 }
@@ -172,6 +172,28 @@ footer img{
     nav ul li {
         display: block;
         margin: 10px 0;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 20px; /* Adds spacing between links */
+    }
+    
+    nav ul li {
+        display: inline;
+    }
+    
+    nav ul li a {
+        text-decoration: none; /* Removes underline */
+        color: white; /* Makes the text white */
+        font-size: 18px; /* Adjust text size */
+        font-weight: bold;
+        transition: color;;
+    }
+    
+    nav ul li a:hover {
+        color: #ffcc00;
     }
 
     .cta-btn {

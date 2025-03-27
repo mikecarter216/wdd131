@@ -75,9 +75,9 @@
     </header>
     <div class="hero">
         <picture>
-            <source srcset="images/nigeria-hero-small.webp" type="image/webp">
-            <source srcset="images/nigeria-hero-large.webp" type="image/webp">
-            <img src="images/nigeria-hero-large.jpg" alt="Beautiful landscape of Nigeria">
+            <source srcset="images/nigeria-hero-small.webp">
+            <source srcset="images/nigeria-hero-large.webp">
+            <img srcset="images/nigeria-hero-large.jpg" alt="Beautiful landscape of Nigeria">
         </picture>
         <div class="overlay">
             <div class="info-box data">
@@ -94,14 +94,14 @@
                 </ul>
             </div>
             <div class="info-box weather">
-                <div class="title">Weather <span class="weather-icon">
-                    <img src="images/sunny-icon.svg" alt="Sunny Weather Icon" width="40" height="40">
+                <div class="title">Weather <span class="weather-icon">⛅
+                    <img srcset="images/sunny-icon.svg" alt="Sunny Weather Icon" width="40" height="40">
                 </span></div>
                 <ul>
                     <li><strong>Temperature:</strong> <span id="temperature">32</span>°C</li>
                     <li><strong>Conditions:</strong> Sunny</li>
                     <li><strong>Wind:</strong> <span id="windSpeed">10</span> km/h</li>
-                    <li><strong>Wind Chill:</strong> <span id="windChill">N/A</span>°C</li>
+                    <li><strong>Wind Chill:</strong> <span id="windChillOutput">Calculating...</span></li>
                 </ul>
             </div>
         </div>
@@ -111,7 +111,26 @@
         <p>Last Modification: <span id="lastModified"></span></p>
     </footer>
     <script>
-        document.getElementById("lastModified").textContent = document.lastModified;
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("lastModified").textContent = document.lastModified;
+            document.getElementById("year").textContent = new Date().getFullYear();
+
+            function calculateWindChill(temp, windSpeed) {
+                return (temp <= 10 && windSpeed > 4.8) 
+                    ? (13.12 + 0.6215 * temp - 11.37 * Math.pow(windSpeed, 0.16) + 0.3965 * temp * Math.pow(windSpeed, 0.16)).toFixed(1) + "°C"
+                    : "N/A";
+            }
+
+            const tempElement = document.getElementById("temperature");
+            const windSpeedElement = document.getElementById("windSpeed");
+            const windChillElement = document.getElementById("windChillOutput");
+
+            if (tempElement && windSpeedElement && windChillElement) {
+                let temperature = parseFloat(tempElement.textContent);
+                let windSpeed = parseFloat(windSpeedElement.textContent);
+                windChillElement.textContent = `Wind Chill: ${calculateWindChill(temperature, windSpeed)}`;
+            }
+        });
     </script>
 </body>
 </html>

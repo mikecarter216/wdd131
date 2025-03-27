@@ -2,10 +2,11 @@ body {
     font-family: Arial, sans-serif;
     margin: 10px;
     padding: 10px;
-    background-color: blueviolet;
+    background-color: rgb(181, 16, 156);
     text-align: center;
-    font-style: italic;
-    background-image:image-set() ;
+    font-style: bold;
+-moz-animation: slidein 3s infinite;
+-webkit-animation: slidein 3s infinite;
 }
 
 header {
@@ -13,7 +14,7 @@ header {
     color: whitesmoke;
     padding: 15px;
     text-align: center;
-    font-style: italic;
+    font-style: bold;
 }
 
 nav ul {
@@ -37,11 +38,11 @@ nav ul li {
 }
 
 .cta-btn {
-    background-color: limegreen;
+    background-color: rgb(42, 5, 230);
     padding: 15px 30px;
     font-size: 18px;
     border-radius: 5px;
-    color: burlywood;
+    color: rgb(251, 247, 243);
     text-transform: uppercase;
 }
 
@@ -50,14 +51,15 @@ nav ul li {
     justify-content: space-around;
     margin-top: 30px;
     text-align: center;
+    font-style: bold;
 }
 
 .feature-card {
-    background-color: red;
+    background-color: rgb(152, 145, 194);
     padding: 20px;
     border-radius: 8px;
     width: 30%;
-    box-shadow: 0 4px 8px white;
+    box-shadow: 0 4px 8px rgb(243, 12, 12);
     margin-bottom: 20px;
 }
 
@@ -72,7 +74,7 @@ nav ul li {
 }
 
 .feature-card p {
-    color: white;
+    color: rgb(28, 11, 11);
 }
 
 .room-list {
@@ -81,14 +83,14 @@ nav ul li {
 }
 
 .room-card {
-    background-color: red;
+    background-color: rgb(92, 21, 21);
     padding: 20px;
     margin: 20px;
     border-radius: 8px;
     width: 30%;
     display: inline-block;
     box-shadow: 0 4px 8px white;
-    color: white;
+    color: rgb(30, 28, 28);
 }
 
 .room-card img {
@@ -103,7 +105,7 @@ nav ul li {
 
 .room-card p {
     font-size: 16px;
-    color: whitesmoke;
+    color: rgb(25, 21, 21);
 }
 
 .gallery {
@@ -123,12 +125,12 @@ nav ul li {
 }
 
 .gallery-item {
-    background-color: red;
+    background-color: rgb(234, 203, 203);
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px white;
+    box-shadow: 0 4px 8px rgb(214, 6, 6);
     text-align: center;
-    font-style: italic;
+    font-style: bold;
 }
 
 .gallery-item img {
@@ -141,7 +143,7 @@ nav ul li {
 .gallery-item p {
     margin-top: 10px;
     font-size: 1rem;
-    color: white;
+    color: rgb(7, 22, 235)
 }
 
 footer {
@@ -149,11 +151,12 @@ footer {
     color: white;
     padding: 15px;
     text-align: center;
-    font-style: italic;
+    font-style: bold;
     font-display: style;
 }
 footer img{
     width: 25px;
+    animation-play-state: running;
 }
 
 @media (max-width: 768px) {

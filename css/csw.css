@@ -1,0 +1,31 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    margin: 20px;
+    padding: 10px;
+    color: white;
+    background-color: pink;
+    text-align: center;
+    background-image: cross-fade();
+}
+header{
+    color: black;
+    font-size: 15px;
+    font-weight: 20px;
+    background-color: green;
+}
+nav button{
+    color:black;
+}
+nav center{
+    text-decoration: line-through;
+}
+footer{
+    color:brown;
+    text-align: 10px;
+    font-display: style;
+    background-color: rgb(173, 150, 194);
+    text-align: center;
+}
+footer img{
+    width: 25px;
+}

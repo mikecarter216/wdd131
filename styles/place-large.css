@@ -8,7 +8,7 @@
 
 :root {
     --white: #fff;
-    --whi: #054011;
+    --green: #054011;
     --green: #0c451f;
     --black: #000;
     --ash: #b39595;
@@ -19,7 +19,7 @@
 }
   ::-webkit-scrollbar-thumb {
     cursor: pointer;
-    background: var(--orange);
+    background: rgb(156, 10, 10);
 }
 
 

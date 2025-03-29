@@ -3,10 +3,10 @@
 
     :root {
         --white: #fff;
-        --orange: #3591f3;
-        --green: #7c5e04;
+        --green: #086d3e;
+        --green: #005c0f;
         --black: #000;
-        --ash: #635f5f;
+        --ash: #aba7a7;
     }
 
     .hero-section {
@@ -39,7 +39,7 @@
     }
 
     footer {
-        background-color: var(--orange);
+        background-color: white;
         padding: 20px;
         display: flex;
         gap: 20px;
@@ -52,5 +52,7 @@
         font-size: 14px;
         line-height: 24.4px;
         color: var(--white);
+        background-color: white;
+        font-style: bold;
     }
 }

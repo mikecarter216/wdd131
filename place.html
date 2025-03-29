@@ -1,136 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nigeria</title>
-    <link rel="stylesheet" href="css/place.css">
-    <script src="place.js" defer></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-        header {
-            background: rgb(26, 100, 76);
-            color: white;
-            padding: 20px;
-            font-size: 24px;
-        }
-        .hero {
-            position: relative;
-            max-width: 100%;
-        }
-        .hero img {
-            width: 100%;
-            height: auto;
-        }
-        .overlay {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-        }
-        .info-box {
-            background: rgba(255, 255, 255, 0.9);
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-            width: 300px;
-        }
-        .title {
-            background: #046307;
-            color: white;
-            padding: 10px;
-            border-radius: 5px 5px 0 0;
-            font-weight: bold;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        footer {
-            background: rgb(7, 103, 55);
-            color: white;
-            padding: 20px;
-            margin-top: 10px;
-        }
-        @media (max-width: 768px) {
-            .overlay {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-    </style>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="WDD 131 – Dynamic Web Fundamentals by Michael Akpan. This page covers the basics of dynamic web development, including HTML, CSS, and JavaScript.">
+        <meta name="author" content="Michael Akpan">
+        <link rel="icon" type="image/x-icon" href="./images/favicon.jpeg">
+        <link rel="stylesheet" href="./styles/place-large.css">
+        <link rel="stylesheet" href="./styles/place.css">
+        <script src="./scripts/getdates.js" defer></script>
+        <script src="./scripts/windchill.js" defer></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <title>WDD 131 - Temple Album - Michael Akpan</title>
+    </head>
 <body>
-    <header>
-        <h1>Nigeria</h1>
-    </header>
-    <div class="hero">
-        <picture>
-            <source srcset="images/nigeria-hero-small.webp">
-            <source srcset="images/nigeria-hero-large.webp">
-            <img srcset="images/nigeria-hero-large.jpg" alt="Beautiful landscape of Nigeria">
-        </picture>
-        <div class="overlay">
-            <div class="info-box data">
-                <div class="title">Data</div>
-                <ul>
-                    <li><strong>Area:</strong> 923,768 sq km</li>
-                    <li><strong>Population:</strong> 223,804,632</li>
-                    <li><strong>Capital:</strong> Abuja</li>
-                    <li><strong>Languages:</strong> English, Hausa, Yoruba, Igbo</li>
-                    <li><strong>Currency:</strong> Nigerian Naira (NGN)</li>
-                    <li><strong>Time Zone:</strong> UTC+1</li>
-                    <li><strong>Calling Code:</strong> +234</li>
-                    <li><strong>Internet TLD:</strong> .ng</li>
-                </ul>
+    <main>
+        <section class="hero-section">
+            <div class="place-title">
+                <h1>Nigeria</h1>
             </div>
-            <div class="info-box weather">
-                <div class="title">Weather <span class="weather-icon">⛅
-                    <img srcset="images/sunny-icon.svg" alt="Sunny Weather Icon" width="40" height="40">
-                </span></div>
-                <ul>
-                    <li><strong>Temperature:</strong> <span id="temperature">32</span>°C</li>
-                    <li><strong>Conditions:</strong> Sunny</li>
-                    <li><strong>Wind:</strong> <span id="windSpeed">10</span> km/h</li>
-                    <li><strong>Wind Chill:</strong> <span id="windChillOutput">Calculating...</span></li>
-                </ul>
+            <picture>
+                <source srcset="./images/nigeria-hero-large.webp" media="(min-width: 1024px)">
+                <source srcset="./images/nigeria-hero-large2.webp" media="(min-width: 724px)">
+                <img src="./images/nigeria-hero-small.webp" alt="Beautiful Nigeria Culture" />
+            </picture>
+            <div class="data-box data">
+                <div class="data-header">
+                    <h4>Data</h4>
+                </div>
+                <div class="content">
+                    <h6>
+                        <strong>Area: </strong>
+                        923,768 sq km
+                    </h6>
+                    <h6>
+                        <strong>Population: </strong>
+                        236,229,141
+                    </h6>
+                    <h6>
+                        <strong>Capital: </strong>
+                        Abuja
+                    </h6>
+                    <h6>
+                        <strong>Languages: </strong>
+                        Hausa, Igbo, Yoruba
+                    </h6>
+                    <h6>
+                        <strong>Currency: </strong>
+                        Nigerian Naira (NGN)
+                    </h6>
+                    <h6>
+                        <strong>Time Zone: </strong>
+                        UTC + 1
+                    </h6>
+                    <h6>
+                        <strong>Calling Code: </strong>
+                        +234
+                    </h6>
+                </div>
             </div>
-        </div>
-    </div>
+    
+            <div class="data-box weather">
+                <div class="data-header">
+                    <h4>Weather</h4>
+                    <img src="./images/weather-icon.svg" alt="weather icon" width="40" height="40" class="weather-icon">
+                </div>
+                <div class="content">
+                    <h6>
+                        <strong>Temperature: </strong>
+                        <span id="temperature">10</span> °C</p>
+                    </h6>
+                    <h6>
+                        <strong>Conditions: </strong>Partly Cloudy</p>
+                        <span id="conditions"></span>
+                    </h6>
+                    <h6>
+                        <strong>Wind: </strong><span id="wind">5</span> km/h</p>
+                        <span id="wind"></span>
+                    </h6>
+                    <h6>
+                        <strong>Wind Chill: </strong>
+                        <span id="windChill"></span>
+                    </h6>
+                </div>
+            </div>
+        </section>
+    </main>
     <footer>
-        <p>© <span id="year"></span>2025  🌸 Michael Akpan 🌸 Nigeria</p>
-        <p>Last Modification: <span id="lastModified"></span></p>
+        <p>
+            &copy; 
+            <span id="currentyear"></span>
+            Michael Akpan |
+            Nigeria
+        </p>
+        <p id="lastModified"></p>
     </footer>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            document.getElementById("lastModified").textContent = document.lastModified;
-            document.getElementById("year").textContent = new Date().getFullYear();
-
-            function calculateWindChill(temp, windSpeed) {
-                return (temp <= 10 && windSpeed > 4.8) 
-                    ? (13.12 + 0.6215 * temp - 11.37 * Math.pow(windSpeed, 0.16) + 0.3965 * temp * Math.pow(windSpeed, 0.16)).toFixed(1) + "°C"
-                    : "N/A";
-            }
-
-            const tempElement = document.getElementById("temperature");
-            const windSpeedElement = document.getElementById("windSpeed");
-            const windChillElement = document.getElementById("windChillOutput");
-
-            if (tempElement && windSpeedElement && windChillElement) {
-                let temperature = parseFloat(tempElement.textContent);
-                let windSpeed = parseFloat(windSpeedElement.textContent);
-                windChillElement.textContent = `Wind Chill: ${calculateWindChill(temperature, windSpeed)}`;
-            }
-        });
-    </script>
 </body>
 </html>

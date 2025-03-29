@@ -108,7 +108,7 @@
 
 footer {
     margin-top: 80px;
-    background-color: rgb(254, 246, 246);
+    background-color: rgb(237, 242, 238);
     padding: 20px;
     display: flex;
     gap: 20px;
@@ -121,5 +121,5 @@ footer p {
     font-size: 14px;
     line-height: 24.4px;
     font-style: bold;
-    color:  rgb(25, 51, 25);
+    color:  rgb(4, 41, 4);
 }

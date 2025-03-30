@@ -80,15 +80,13 @@
     </footer>
 
     <script>
-        // Toggle the mobile menu when the hamburger button is clicked
         const hamburgerBtn = document.getElementById("hamburgerBtn");
         const navList = document.getElementById("navList");
 
         hamburgerBtn.addEventListener("click", () => {
-            navList.classList.toggle("active");  // Toggle the 'active' class
+            navList.classList.toggle("active");
         });
 
-        // Display the last modified date
         const lastModified = new Date(document.lastModified);
         document.getElementById("lastModified").textContent = `Last Modified: ${lastModified.toLocaleDateString()} ${lastModified.toLocaleTimeString()}`;
     </script>

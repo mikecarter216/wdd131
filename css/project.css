@@ -2,11 +2,12 @@ body {
     font-family: Arial, sans-serif;
     margin: 10px;
     padding: 10px;
-    background-color: rgb(181, 16, 156);
+    background-color: rgb(184, 153, 179);
     text-align: center;
     font-style: bold;
 -moz-animation: slidein 3s infinite;
 -webkit-animation: slidein 3s infinite;
+color: rgb(69, 3, 223);
 }
 
 header {
@@ -38,7 +39,7 @@ nav ul li {
 }
 
 .cta-btn {
-    background-color: rgb(42, 5, 230);
+    background-color: rgb(63, 30, 197);
     padding: 15px 30px;
     font-size: 18px;
     border-radius: 5px;
@@ -55,12 +56,15 @@ nav ul li {
 }
 
 .feature-card {
-    background-color: rgb(152, 145, 194);
+    background-color: rgb(233, 231, 249);
     padding: 20px;
     border-radius: 8px;
     width: 30%;
     box-shadow: 0 4px 8px rgb(243, 12, 12);
     margin-bottom: 20px;
+    color: blue;
+    position: relative;
+    -webkit-text-fill-color: blue;
 }
 
 .feature-card img {
@@ -74,7 +78,7 @@ nav ul li {
 }
 
 .feature-card p {
-    color: rgb(28, 11, 11);
+    color: rgb(231, 208, 208);
 }
 
 .room-list {
@@ -147,8 +151,8 @@ nav ul li {
 }
 
 footer {
-    background-color: blue;
-    color: white;
+    background-color: rgb(221, 221, 234);
+    color: rgb(28, 14, 14);
     padding: 15px;
     text-align: center;
     font-style: bold;

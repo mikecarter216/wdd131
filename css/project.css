@@ -5,9 +5,16 @@ body {
     background-color: rgb(184, 153, 179);
     text-align: center;
     font-style: bold;
--moz-animation: slidein 3s infinite;
--webkit-animation: slidein 3s infinite;
 color: rgb(69, 3, 223);
+    position: relative;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-style: bold;
+    text-align: center;
+    background-color: rgb(184, 153, 179);
+    color: rgb(69, 3, 223);
+
 }
 
 header {
@@ -19,14 +26,14 @@ header {
 }
 
 nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+    list-style-type: flex;
+    padding: 10px;
+    margin: 10px;
 }
 
 nav ul li {
     display: inline;
-    margin: 0 15px;
+    margin: 15px;
 }
 
 .hero {
@@ -58,9 +65,9 @@ nav ul li {
 .feature-card {
     background-color: rgb(233, 231, 249);
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 200px;
     width: 30%;
-    box-shadow: 0 4px 8px rgb(243, 12, 12);
+    box-shadow: 0 10px 20px rgb(6, 6, 218);
     margin-bottom: 20px;
     color: blue;
     position: relative;
@@ -69,7 +76,9 @@ nav ul li {
 
 .feature-card img {
     width: 100%;
-    border-radius: 5px;
+    border-radius: 150px;
+    box-shadow: 0 10px 20px rgb(228, 9, 9);
+    position: relative;
 }
 
 .feature-card h3 {
@@ -90,16 +99,16 @@ nav ul li {
     background-color: rgb(92, 21, 21);
     padding: 20px;
     margin: 20px;
-    border-radius: 8px;
+    border-radius: 20px;
     width: 30%;
     display: inline-block;
-    box-shadow: 0 4px 8px white;
+    box-shadow: 0 10px 20px rgb(47, 12, 222);
     color: rgb(30, 28, 28);
 }
 
 .room-card img {
     width: 100%;
-    border-radius: 5px;
+    border-radius: 20px;
 }
 
 .room-card h3 {
@@ -113,26 +122,27 @@ nav ul li {
 }
 
 .gallery {
-    padding: 30px;
+    padding: 10px;
     text-align: center;
 }
 
 .gallery h2 {
     font-size: 2rem;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
+    padding: 50px;
 }
 
 .gallery-item {
     background-color: rgb(234, 203, 203);
     padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgb(214, 6, 6);
+    border-radius: 50px;
+    box-shadow: 0 20px 20px rgb(37, 3, 210);
     text-align: center;
     font-style: bold;
 }
@@ -140,8 +150,8 @@ nav ul li {
 .gallery-item img {
     width: 100%;
     height: auto;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px whitesmoke;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(228, 9, 9, 0.772);
 }
 
 .gallery-item p {
@@ -157,10 +167,13 @@ footer {
     text-align: center;
     font-style: bold;
     font-display: style;
+    position: relative;
 }
 footer img{
     width: 25px;
     animation-play-state: running;
+    text-align: center;
+    position: relative;
 }
 
 @media (max-width: 768px) {
@@ -181,7 +194,7 @@ footer img{
     nav ul {
         list-style: none;
         display: flex;
-        gap: 20px; /* Adds spacing between links */
+        gap: 20px;
     }
     
     nav ul li {
@@ -189,9 +202,9 @@ footer img{
     }
     
     nav ul li a {
-        text-decoration: none; /* Removes underline */
-        color: white; /* Makes the text white */
-        font-size: 18px; /* Adjust text size */
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
         font-weight: bold;
         transition: color;;
     }

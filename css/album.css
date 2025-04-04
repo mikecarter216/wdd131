@@ -1,16 +1,23 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #c108af;
-    color: #f0e4e4;
+    margin: 10px;
+    background: linear-gradient(to right, #922792, #e71616);
+    padding: 10px;
+    background-color: #63385d;
+    color: #f3f8f4;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
 }
 
 header {
-    background-color: #e81a1a;
+    background-color: #5f0c0c;
     color: white;
     text-align: center;
     padding: 1rem;
+    font-style: italic;
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(252, 5, 5, 0.973);
 }
 
 main {
@@ -23,18 +30,18 @@ main {
 }
 
 .about-my-life {
-    background: rgb(3, 3, 233);
+    background: rgb(27, 27, 86);
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(254, 253, 253, 0.941);
+    border-radius: 120px;
+    box-shadow: 0 0 100px rgba(252, 251, 252, 0.941);
     max-width: 800px;
     margin: auto;
 }
 
 .profile-img {
     width: 300px;
-    border-radius: 10%;
-    margin-top: 20px;
+    border-radius: 200%;
+    margin-top: 200px;
 }
 
 .album-container {
@@ -48,13 +55,17 @@ main {
     margin-top: 10px;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .gallery img {
     width: 100%;
-    border-radius: 5px;
+    border-radius: 800px;
     transition: transform 0.3s ease-in-out;
     object-fit: cover;
+    display: grid;
+    position: relative;
+    resize: 200px;
 }
 
 .gallery img:hover {
@@ -62,11 +73,11 @@ main {
 }
 
 .card {
-    background: rgb(124, 131, 160);
+    background: rgb(63, 130, 18);
     padding: 15px;
     margin: 20px 0;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 100px;
+    box-shadow: 2px 20px 50px rgba(252, 5, 5, 0.973);
 }
 
 .card-heading {
@@ -75,9 +86,11 @@ main {
 }
 
 footer {
-    background-color: #f01818;
+    background-color: #751a22;
     color: rgb(245, 243, 249);
     text-align: center;
     padding: 10px;
     margin-top: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.973);
 }

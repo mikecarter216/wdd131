@@ -1,0 +1,188 @@
+<!-- Full Updated HTML Code -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Michael Akpan | Software Developer</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/typewriter-effect@2.18.0/dist/core.js"></script>
+
+  <style>
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 50;
+      display: none;
+    }
+
+    #tsparticles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+  </style>
+
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      const scrollTopBtn = document.getElementById("scrollTopBtn");
+      window.onscroll = () => {
+        scrollTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
+      };
+      scrollTopBtn.onclick = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      };
+
+      const typewriterEl = document.getElementById('typewriter');
+      if (typewriterEl) {
+        new Typewriter(typewriterEl, {
+          strings: ['Software Developer', 'BYU-Idaho Student', 'Problem Solver'],
+          autoStart: true,
+          loop: true,
+        });
+      }
+
+      tsParticles.load("tsparticles", {
+        background: {
+          color: { value: "#f3f4f6" },
+        },
+        particles: {
+          color: { value: "#6b7280" },
+          links: { enable: true, color: "#9ca3af" },
+          move: { enable: true, speed: 1 },
+          number: { value: 60 },
+          size: { value: 3 },
+        }
+      });
+    });
+  </script>
+</head>
+
+<body class="bg-gray-100 text-gray-900 transition duration-300 relative">
+
+  <!-- Particle Background -->
+  <div id="tsparticles"></div>
+
+  <!-- Hero Section -->
+  <header class="relative bg-gradient-to-tr from-rose-200 via-pink-100 to-red-200 h-72 flex items-center justify-center text-white shadow-lg"
+    style="background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80'); background-size: cover; background-position: center;">
+    <div class="text-center bg-black/30 p-6 rounded">
+      <h1 class="text-4xl md:text-5xl font-bold text-white">Michael Akpan</h1>
+      <p id="typewriter" class="text-lg mt-2 text-gray-200 h-6"></p>
+    </div>
+  </header>
+
+  <!-- About Me -->
+  <section class="max-w-4xl mx-auto p-6 mt-8">
+    <div class="flex flex-col md:flex-row items-center gap-6">
+      <img src="images/carter.jpg" alt="Michael Akpan" class="w-48 h-48 rounded-full object-cover border-4 border-blue-600" />
+      <div>
+        <h2 class="text-2xl font-semibold mb-2">About Me/ You are welcome to my portfolio with love</h2>
+        <p>
+          I'm Michael Akpan from Ikot EKpene the first Local Government in West Africa, Akwa Ibom State Nigeria. I love learning new things nd making friends, a passionate software developer and BYU-Idaho student with experience in full-stack development and real-world applications like a hotel management system and receipt generator. I want to explore more with any opportunity to able to serve.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="max-w-4xl mx-auto p-6">
+    <h2 class="text-2xl font-semibold mb-2">Skills</h2>
+    <ul class="list-disc pl-6 space-y-1">
+      <li>Python (OOP, File I/O, Inheritance)</li>
+      <li>HTML, CSS, JavaScript, Tailwind CSS</li>
+      <li>React (Basics), Git & GitHub</li>
+      <li>SQL & Database Management</li>
+      <li>Problem Solving & Debugging</li>
+      <li>Customer Support & Team Collaboration</li>
+    </ul>
+  </section>
+
+  <!-- Experience -->
+  <section class="max-w-4xl mx-auto p-6">
+    <h2 class="text-2xl font-semibold mb-2">Experience</h2>
+    <div class="mb-6">
+      <h3 class="text-xl font-bold">Software Developer Intern – Personal Projects</h3>
+      <p>Self-driven development of functional applications such as a hotel management system and receipt generator to simulate real-world scenarios.</p>
+      <p class="text-sm text-gray-600 mt-1">Jan 2024 – Present | Remote</p>
+    </div>
+    <div class="mb-6">
+      <h3 class="text-xl font-bold">Customer Support Assistant – Freelance</h3>
+      <p>Assisted clients with technical issues and provided product support while improving communication and problem-solving skills.</p>
+      <p class="text-sm text-gray-600 mt-1">May 2023 – Dec 2023 | Remote</p>
+    </div>
+    <div class="mb-6">
+      <h3 class="text-xl font-bold">Full-Time Missionary – The Church of Jesus Christ of Latter-day Saints</h3>
+      <p>Served a full-time mission, providing spiritual guidance, humanitarian service, and community engagement.</p>
+      <p class="text-sm text-gray-600 mt-1">2016 – 2018 | Nigeria Port Harcourt Mission</p>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section class="max-w-4xl mx-auto p-6">
+    <h2 class="text-2xl font-semibold mb-2">Education</h2>
+    <div class="mb-6">
+      <h3 class="text-xl font-bold">Brigham Young University - Idaho (BYU-Idaho)</h3>
+      <p>Bachelor of Science in Applied Technology – Emphasis in Software Development</p>
+      <p class="text-sm text-gray-600 mt-1">Expected Graduation: 2026</p>
+    </div>
+    <div class="mb-6">
+      <h3 class="text-xl font-bold">Senior Secondary School Certificate (SSCE)</h3>
+      <p>Completed secondary education with emphasis on science subjects.</p>
+      <p class="text-sm text-gray-600 mt-1">Graduated: 2012</p>
+    </div>
+    <div class="mb-6">
+      <h3 class="text-xl font-bold">First School Leaving Certificate (FLSC)</h3>
+      <p>Completed primary education and obtained FLSC qualification.</p>
+      <p class="text-sm text-gray-600 mt-1">Graduated: 2007</p>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="max-w-4xl mx-auto p-6">
+    <h2 class="text-2xl font-semibold mb-4">Projects</h2>
+    
+    <div class="mb-6">
+      <h3 class="text-xl font-bold">Hotel Management System</h3>
+      <p>Terminal-based app for guest check-ins, payments, and room tracking using persistent storage.</p>
+      <p class="text-sm text-gray-600 mt-1">
+        Technologies: Python, File I/O |
+        <a href="https://mikecarter216.github.io/wdd131/project.html" class="text-blue-600 underline">Visit Website</a>
+      </p>
+    </div>
+  
+    <div class="mb-6">
+      <h3 class="text-xl font-bold">Receipt Generator (CSE 111)</h3>
+      <p>Reads CSV data to create formatted receipts with tax/discounts using exception handling.</p>
+      <p class="text-sm text-gray-600 mt-1">
+        Technologies: Python, CSV |
+        <a href="https://github.com/mikecarter216" class="text-blue-600 underline">Visit Website</a>
+      </p>
+    </div>
+  
+    <div class="mb-6">
+      <h3 class="text-xl font-bold">White Water Rafting Website</h3>
+      <p>Responsive website promoting white water rafting adventures, featuring imagery, company information, and contact forms.</p>
+      <p class="text-sm text-gray-600 mt-1">
+        Technologies: HTML, CSS |
+        <a href="https://mikecarter216.github.io/wdd130/wwr/index.html" class="text-blue-600 underline">Visit Website</a>
+      </p>
+    </div>
+  </section>
+  
+  <!-- Scroll to Top Button -->
+  <button id="scrollTopBtn" class="bg-blue-600 text-white px-3 py-2 rounded-full shadow-lg hover:bg-blue-700 transition">
+    ↑ Top
+  </button>
+
+  <!-- Footer -->
+  <footer class="bg-blue-800 text-white text-center p-4 mt-8">
+    &copy; 2025 Michael Akpan. All rights reserved.
+  </footer>
+</body>
+</html>

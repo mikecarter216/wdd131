@@ -1,72 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio page for Michael Akpan for WDD 131 - Dynamic Web Fundamentals course. Showcasing web development skills, resources, and personal background.">
-    <meta name="author" content="Michael Akpan">
-    <link rel="stylesheet" href="styles/base.css">
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>WDD 131: Home Page - Michael Akpan</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Michael Akpan | Software Developer</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/typewriter-effect@2.18.0/dist/core.js"></script>
+
+  <style>
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 50;
+      display: none;
+    }
+
+    #tsparticles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+  </style>
+
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+
+      const typewriterEl = document.getElementById('typewriter');
+      if (typewriterEl) {
+        new Typewriter(typewriterEl, {
+          strings: ['Software Developer', 'Bookkeeper', 'Data Entry Specialist'],
+          autoStart: true,
+          loop: true,
+        });
+      }
+
+      tsParticles.load("tsparticles", {
+        background: { color: { value: "#f3f4f6" } },
+        particles: {
+          color: { value: "#6b7280" },
+          links: { enable: true, color: "#9ca3af" },
+          move: { enable: true, speed: 1 },
+          number: { value: 60 },
+          size: { value: 3 },
+        }
+      });
+
+    });
+  </script>
 </head>
-<body>
-    <header>
-        <div class="top-header">
-            <h1>WDD 131: Dynamic Web Fundamentals - <span class="name">Michael Akpan</span></h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="https://www.linkedin.com/in/michael-akpan-326b132b9" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-                <li><a href="https://byupw.instructure.com/" target="_blank" rel="noopener noreferrer">Canvas</a></li>
-                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm" target="_blank" rel="noopener noreferrer">Scripture</a></li>
-                <li><a href="#">Final Project</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section class="content">
-            <section class="card about-me">
-                <div class="card-heading">About Me</div>
-                <div class="card-content">
-                    <p>My name is Michael Akpan, and I am deeply passionate about web development. I am currently pursuing <strong>Software Development at Brigham Young University–Idaho (BYU–Idaho)</strong>. I enjoy learning new technologies, exploring innovative ideas, and creating dynamic, user-friendly websites. Coding is my passion, and I strive to build impactful digital solutions....</p>
-                    <img src="images/mike.jpg" alt="Michael Akpan, passionate web developer" class="profile-img">
-                    <div class="country-container">
-                        <h3>Nigeria</h3>
-                        <div class="country">
-                            <img src="images/Nigeria flag.png" alt="Official Flag of Nigeria" class="flag">
-                            <p>Nigeria, located in West Africa, is known for its rich culture, diverse languages, and booming tech industry. It is home to Nollywood, one of the world's largest film industries, and a growing hub for technology startups....</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+<body class="bg-gray-100 text-gray-900 relative">
 
-            <section class="card web-resources">
-                <div class="card-heading">Web Dev Resources</div>
-                <ul>
-                    <li><a href="#">*Dev.to Community</a></li>
-                    <li><a href="#">*Smashing Magazine</a></li>
-                    <li><a href="#">*CSS Tricks</a></li>
-                    <li><a href="#">*W3 Schools</a></li>
-                    <li><a href="#">*Udemy</a></li>
-                </ul>
-            </section>
-        </section>
-    </main>
+<div id="tsparticles"></div>
 
-    <footer>
-        <p>&copy;<span id="currentYear"></span> - Michael Akpan - Nigeria</p>
-        <p>Last Modification: <span id="lastModified"></span></p>
-    </footer>
+<!-- HERO -->
+<header class="relative h-72 flex items-center justify-center text-white shadow-lg"
+style="background-image: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1950&q=80'); background-size: cover; background-position: center;">
+  <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+  <div class="relative text-center p-6 rounded z-10">
+    <h1 class="text-4xl md:text-5xl font-bold">Michael Akpan</h1>
+    <p id="typewriter" class="text-lg mt-2 text-gray-200 h-6"></p>
+  </div>
+</header>
 
-    <script>
-        // Populate current year dynamically
-        const currentYear = new Date().getFullYear();
-        document.getElementById("currentYear").textContent = currentYear;
+<!-- ABOUT -->
+<section class="max-w-4xl mx-auto p-6 border-t border-gray-300 mt-8">
+  <h2 class="text-2xl font-semibold border-b-2 border-blue-600 pb-2 mb-4">About Me</h2>
+  <div class="flex flex-col md:flex-row items-center gap-6">
+    <img src="images/carter.jpg" alt="Michael Akpan" class="w-48 h-48 rounded-full object-cover border-4 border-blue-600 shadow-lg" />
+    <p>
+      Passionate Software Developer and Bookkeeping Professional with experience in data management, accounting, and web development. Dedicated to accuracy, efficiency, and continuous learning.
+    </p>
+  </div>
+</section>
 
-        // Display last modification date dynamically
-        const lastModified = new Date(document.lastModified);
-        document.getElementById("lastModified").textContent = `Last Modified: ${lastModified.toLocaleDateString()} ${lastModified.toLocaleTimeString()}`;
-    </script>
+<!-- SOFTWARE SKILLS -->
+<section class="max-w-4xl mx-auto p-6 border-t border-gray-300">
+  <h2 class="text-2xl font-semibold border-b-2 border-blue-600 pb-2 mb-6">Software & Technical Skills</h2>
+  <div class="grid md:grid-cols-2 gap-6">
+    <ul class="space-y-2">
+      <li>✔ Python (OOP, File Handling, CSV)</li>
+      <li>✔ HTML5, CSS3, Tailwind CSS</li>
+      <li>✔ JavaScript (Basics)</li>
+      <li>✔ React (Fundamentals)</li>
+    </ul>
+    <ul class="space-y-2">
+      <li>✔ SQL & Database Management</li>
+      <li>✔ Git & GitHub</li>
+      <li>✔ Microsoft Excel & QuickBooks</li>
+      <li>✔ Data Entry & Data Verification</li>
+    </ul>
+  </div>
+</section>
+
+<!-- SOFT SKILLS -->
+<section class="max-w-4xl mx-auto p-6 border-t border-gray-300">
+  <h2 class="text-2xl font-semibold border-b-2 border-blue-600 pb-2 mb-6">Professional Skills</h2>
+  <div class="grid md:grid-cols-2 gap-6">
+    <ul class="space-y-2">
+      <li>✔ Communication (Speaking & Writing)</li>
+      <li>✔ Typing Speed: 80+ WPM</li>
+      <li>✔ Adaptability & Multitasking</li>
+      <li>✔ Problem-Solving</li>
+    </ul>
+    <ul class="space-y-2">
+      <li>✔ Time Management</li>
+      <li>✔ Active Listening</li>
+      <li>✔ Attention to Detail</li>
+      <li>✔ Teamwork & Positive Attitude</li>
+    </ul>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="max-w-4xl mx-auto p-6 border-t border-gray-300">
+  <h2 class="text-2xl font-semibold border-b-2 border-blue-600 pb-2 mb-6">
+    Professional Experience
+  </h2>
+
+  <!-- Bookkeeper -->
+  <div class="mb-8">
+    <h3 class="text-xl font-bold">Bookkeeper</h3>
+    <p class="font-medium text-gray-700">Mountain River Partners (Remote)</p>
+    <p class="text-sm text-gray-600 mb-3">Dec 2025 – Present</p>
+    <ul class="list-disc pl-6 space-y-2">
+      <li>Maintained 99% accuracy in financial records and reconciliations.</li>
+      <li>Prepared financial reports and managed bookkeeping processes.</li>
+      <li>Reconciled bank statements and ensured compliance with accounting standards.</li>
+    </ul>
+  </div>
+
+  <!-- Data Entry Specialist -->
+  <div class="mb-8">
+    <h3 class="text-xl font-bold">Data Entry Specialist</h3>
+    <p class="font-medium text-gray-700">Springboard (Remote)</p>
+    <p class="text-sm text-gray-600 mb-3">September 2025 – Dec 2025</p>
+    <ul class="list-disc pl-6 space-y-2">
+      <li>Entered and verified thousands of records with 99% accuracy.</li>
+      <li>Accurately indexed family history and genealogical records into the FamilySearch database.</li>
+      <li>Reviewed, verified, and corrected data to maintain high-quality record entries.</li>
+      <li>Collaborated with team members to meet daily and weekly entry targets efficiently.</li>
+      <li>Reported inconsistencies and contributed to improving data quality control processes.</li>
+    </ul>
+  </div>
+
+  <!-- Manager / Data Administration -->
+  <div class="mb-8">
+    <h3 class="text-xl font-bold">Manager / Data Administration</h3>
+    <p class="font-medium text-gray-700">Tropical Hotels Nigeria</p>
+    <p class="text-sm text-gray-600 mb-3">July 2022 – May 2025</p>
+    <ul class="list-disc pl-6 space-y-2">
+      <li>Increased customer satisfaction by 20% through improved service systems.</li>
+      <li>Managed weekly $1,000+ operational budget.</li>
+      <li>Maintained financial and administrative records with strong accuracy.</li>
+    </ul>
+  </div>
+
+  <!-- Missionary Service -->
+  <div class="mb-8">
+    <h3 class="text-xl font-bold">Voluntary Missionary Service</h3>
+    <p class="font-medium text-gray-700">
+      The Church of Jesus Christ of Latter-day Saints – Nigeria Ibadan Mission
+    </p>
+    <p class="text-sm text-gray-600 mb-3">Dec 2019 – Dec 2021</p>
+    <ul class="list-disc pl-6 space-y-2">
+      <li>Supervised and trained volunteers across multiple cities.</li>
+      <li>Conducted weekly leadership councils and outreach training sessions.</li>
+      <li>Engaged with 100+ individuals daily, strengthening public speaking skills.</li>
+      <li>Achieved 100% of monthly performance goals consistently.</li>
+      <li>Managed reports, tracking systems, and record keeping.</li>
+    </ul>
+  </div>
+
+</section>
+
+<!-- PROJECTS -->
+<section class="max-w-4xl mx-auto p-6 border-t border-gray-300">
+  <h2 class="text-2xl font-semibold border-b-2 border-blue-600 pb-2 mb-6">Projects</h2>
+
+  <div class="mb-6">
+    <h3 class="text-xl font-bold">Hotel Management System</h3>
+    <p>Terminal-based app for guest check-ins and payments.</p>
+    <p class="text-sm text-gray-600">
+      Python |
+      <a href="https://mikecarter216.github.io/wdd131/project.html" class="text-blue-600 underline">Visit Website</a>
+    </p>
+  </div>
+
+  <div class="mb-6">
+    <h3 class="text-xl font-bold">White Water Rafting Website</h3>
+    <p>Responsive adventure company website.</p>
+    <p class="text-sm text-gray-600">
+      HTML & CSS |
+      <a href="https://mikecarter216.github.io/wdd130/wwr/index.html" class="text-blue-600 underline">Visit Website</a>
+    </p>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section class="max-w-4xl mx-auto p-6 border-t border-gray-300">
+  <h2 class="text-2xl font-semibold border-b-2 border-blue-600 pb-2 mb-6">Certifications</h2>
+  <div class="space-y-4">
+    <div>
+      <h3 class="font-bold">Intuit Bookkeeping Certification</h3>
+      <a href="https://drive.google.com/drive/folders/1KSZyZkqoY1lEBxzDr_aWXpSg7thefNrw?usp=drive_link" target="_blank" class="text-blue-600 underline">View Certificate</a>
+    </div>
+    <div>
+      <h3 class="font-bold">BYU-Idaho Web Development Certificate</h3>
+      <a href="https://drive.google.com/drive/folders/1wUP2dZvB04rlJguFIPm-Zo_9BMMCveEi?usp=drive_link" target="_blank" class="text-blue-600 underline">View Certificate</a>
+    </div>
+  </div>
+</section>
+
+<!-- BADGES -->
+<section class="max-w-6xl mx-auto p-8 border-t border-gray-300">
+  <h2 class="text-3xl font-bold border-b-2 border-blue-600 pb-3 mb-8 text-center">
+    Professional Badges
+  </h2>
+
+  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
+
+    <!-- Badge Card -->
+    <div class="bg-white p-4 rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-2 transition duration-300 flex items-center justify-center">
+      <img src="images/badge1.png" alt="Badge 1" class="h-32 w-full object-contain">
+    </div>
+
+    <div class="bg-white p-4 rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-2 transition duration-300 flex items-center justify-center">
+      <img src="images/badge2.png" alt="Badge 2" class="h-32 w-full object-contain">
+    </div>
+
+    <div class="bg-white p-4 rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-2 transition duration-300 flex items-center justify-center">
+      <img src="images/badge3.png" alt="Badge 3" class="h-32 w-full object-contain">
+    </div>
+
+    <div class="bg-white p-4 rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-2 transition duration-300 flex items-center justify-center">
+      <img src="images/badge4.png" alt="Badge 4" class="h-32 w-full object-contain">
+    </div>
+
+    <div class="bg-white p-4 rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-2 transition duration-300 flex items-center justify-center">
+      <img src="images/badge5.png" alt="Badge 5" class="h-32 w-full object-contain">
+    </div>
+
+    <div class="bg-white p-4 rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-2 transition duration-300 flex items-center justify-center">
+      <img src="images/badge6.png" alt="Badge 6" class="h-32 w-full object-contain">
+    </div>
+
+    <div class="bg-white p-4 rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-2 transition duration-300 flex items-center justify-center">
+      <img src="images/badge7.png" alt="Badge 7" class="h-32 w-full object-contain">
+    </div>
+
+    <div class="bg-white p-4 rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-2 transition duration-300 flex items-center justify-center">
+      <img src="images/badge8.png" alt="Badge 8" class="h-32 w-full object-contain">
+    </div>
+
+  </div>
+</section>
+
+<footer class="bg-blue-800 text-white text-center p-4 mt-8">
+  &copy; 2025 Michael Akpan. All rights reserved.
+</footer>
+
 </body>
 </html>

@@ -1,9 +1,17 @@
 body {
     font-family: Arial, sans-serif;
+<<<<<<< HEAD
     margin: 0;
     padding: 10px;
     background-color: #63385d;
     color: #f0e4e4;
+=======
+    margin: 10px;
+    background: linear-gradient(to right, #922792, #e71616);
+    padding: 10px;
+    background-color: #63385d;
+    color: #f3f8f4;
+>>>>>>> d1b74c10758e7281711fbfa3e35efb0d4f8d550a
     font-style: italic;
     font-family: Arial, Helvetica, sans-serif;
     font-size: large;
@@ -15,6 +23,11 @@ header {
     text-align: center;
     padding: 1rem;
     font-style: italic;
+<<<<<<< HEAD
+=======
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(252, 5, 5, 0.973);
+>>>>>>> d1b74c10758e7281711fbfa3e35efb0d4f8d550a
 }
 
 main {
@@ -29,7 +42,11 @@ main {
 .about-my-life {
     background: rgb(27, 27, 86);
     padding: 20px;
+<<<<<<< HEAD
     border-radius: 10px;
+=======
+    border-radius: 120px;
+>>>>>>> d1b74c10758e7281711fbfa3e35efb0d4f8d550a
     box-shadow: 0 0 100px rgba(252, 251, 252, 0.941);
     max-width: 800px;
     margin: auto;
@@ -37,7 +54,7 @@ main {
 
 .profile-img {
     width: 300px;
-    border-radius: 10%;
+    border-radius: 200%;
     margin-top: 20px;
 }
 
@@ -46,7 +63,7 @@ main {
 }
 
 .gallery {
-    display: flex;
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 10px;
     margin-top: 10px;
@@ -58,11 +75,18 @@ main {
 .gallery img {
     width: 100%;
     border-radius: 800px;
+<<<<<<< HEAD
     transition: transform 0.3s ease-in-out;
     object-fit: cover;
     display: grid;
     position: relative;
     resize: 50px;
+=======
+    object-fit: cover;
+    display: grid;
+    position: relative;
+    resize: 200px;
+>>>>>>> d1b74c10758e7281711fbfa3e35efb0d4f8d550a
 }
 
 .gallery img:hover {
@@ -70,11 +94,15 @@ main {
 }
 
 .card {
+<<<<<<< HEAD
     background: rgb(91, 71, 5);
+=======
+    background: rgb(63, 130, 18);
+>>>>>>> d1b74c10758e7281711fbfa3e35efb0d4f8d550a
     padding: 15px;
     margin: 20px 0;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 100px;
+    box-shadow: 2px 20px 50px rgba(252, 5, 5, 0.973);
 }
 
 .card-heading {
@@ -88,4 +116,15 @@ footer {
     text-align: center;
     padding: 10px;
     margin-top: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.973);
 }
+@keyframes slideRight {
+    100% { transform: translateX(-50%); }
+    100% { transform: translateX(50v); }
+  }
+  
+  .sliding-image {
+    position: absolute;
+    animation: slideRight 5s linear infinite;
+  }

@@ -1,16 +1,20 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    background-color: #c108af;
+    padding: 10px;
+    background-color: #63385d;
     color: #f0e4e4;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
 }
 
 header {
-    background-color: #e81a1a;
+    background-color: #5f0c0c;
     color: white;
     text-align: center;
     padding: 1rem;
+    font-style: italic;
 }
 
 main {
@@ -23,10 +27,10 @@ main {
 }
 
 .about-my-life {
-    background: rgb(3, 3, 233);
+    background: rgb(27, 27, 86);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(254, 253, 253, 0.941);
+    box-shadow: 0 0 100px rgba(252, 251, 252, 0.941);
     max-width: 800px;
     margin: auto;
 }
@@ -48,13 +52,17 @@ main {
     margin-top: 10px;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .gallery img {
     width: 100%;
-    border-radius: 5px;
+    border-radius: 800px;
     transition: transform 0.3s ease-in-out;
     object-fit: cover;
+    display: grid;
+    position: relative;
+    resize: 50px;
 }
 
 .gallery img:hover {
@@ -62,7 +70,7 @@ main {
 }
 
 .card {
-    background: rgb(124, 131, 160);
+    background: rgb(91, 71, 5);
     padding: 15px;
     margin: 20px 0;
     border-radius: 10px;
@@ -75,7 +83,7 @@ main {
 }
 
 footer {
-    background-color: #f01818;
+    background-color: #751a22;
     color: rgb(245, 243, 249);
     text-align: center;
     padding: 10px;

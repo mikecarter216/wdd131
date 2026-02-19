@@ -9,7 +9,7 @@ body {
 header {
     background-color: #52094a;
     color: white;
-    padding: 0px;
+    padding: 10px;
     text-align: center;
 }
 
@@ -23,7 +23,7 @@ label, textarea, input, select {
     margin-bottom: 10px;
     width: 100%;
     padding: 5px;
-    border: 0px solid #ccc;
+    border: 0px solid #e7e2e2;
     box-sizing: border-box;
 }
 
@@ -39,13 +39,13 @@ label, textarea, input, select {
 }
 
 .rating label {
-    font-size: 30px;
-    color: #db6262;
+    font-size: 20px;
+    color: #fcf0f0;
     cursor: pointer;
 }
 
 .rating input:checked ~ label {
-    color: gold;
+    color: rgb(248, 4, 4);
 }
 
 .rating label:hover,
@@ -77,12 +77,13 @@ legend {
     font-size: 14px;
     padding-left: 25px;
     cursor: pointer;
+    font-style:italic;
 }
 
 .checkbox-group input[type="checkbox"] {
     position: absolute;
-    left: 0;
-    top: 50%;
+    left: 5px;
+    top: 35%;
     transform: translateY(-50%);
     opacity: 1;
     pointer-events: auto;
@@ -91,11 +92,11 @@ legend {
 }
 .checkbox-group label:before {
     content: '';
-    font-size: 18px;
+    font-size: 10px;
     position: absolute;
     left: 0;
     top: 0;
-    color: #ccc;
+    color: #f0dfdf;
 }
 
 .checkbox-group input[type="checkbox"]:checked + label:before {
@@ -107,7 +108,7 @@ footer {
     background-color: #45163e;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 20px;
 }
 
 footer p {

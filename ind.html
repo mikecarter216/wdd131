@@ -1,72 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio page for Michael Akpan for WDD 131 - Dynamic Web Fundamentals course. Showcasing web development skills, resources, and personal background.">
-    <meta name="author" content="Michael Akpan">
-    <link rel="stylesheet" href="styles/base.css">
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>WDD 131: Home Page - Michael Akpan</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perfect HTML + CSS Page</title>
+  <style>
+    /* Reset and base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background: #005f73;
+      color: #fff;
+      padding: 1.5rem 1rem;
+      text-align: center;
+    }
+
+    nav {
+      margin-top: 1rem;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+  background: url('https://images.unsplash.com/photo-1493244040629-496f6d136cc3?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+    main {
+      padding: 2rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      margin-bottom: 1.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #333;
+      color: white;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        font-size: 1.2rem;
+        height: 200px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="top-header">
-            <h1>WDD 131: Dynamic Web Fundamentals - <span class="name">Michael Akpan</span></h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="https://www.linkedin.com/in/michael-akpan-326b132b9" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-                <li><a href="https://byupw.instructure.com/" target="_blank" rel="noopener noreferrer">Canvas</a></li>
-                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm" target="_blank" rel="noopener noreferrer">Scripture</a></li>
-                <li><a href="#">Final Project</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section class="content">
-            <section class="card about-me">
-                <div class="card-heading">About Me</div>
-                <div class="card-content">
-                    <p>My name is Michael Akpan, and I am deeply passionate about web development. I am currently pursuing <strong>Software Development at Brigham Young University–Idaho (BYU–Idaho)</strong>. I enjoy learning new technologies, exploring innovative ideas, and creating dynamic, user-friendly websites. Coding is my passion, and I strive to build impactful digital solutions....</p>
-                    <img src="images/mike.jpg" alt="Michael Akpan, passionate web developer" class="profile-img">
-                    <div class="country-container">
-                        <h3>Nigeria</h3>
-                        <div class="country">
-                            <img src="images/Nigeria flag.png" alt="Official Flag of Nigeria" class="flag">
-                            <p>Nigeria, located in West Africa, is known for its rich culture, diverse languages, and booming tech industry. It is home to Nollywood, one of the world's largest film industries, and a growing hub for technology startups....</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+  <header>
+    <h1>My Perfect Webpage</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
 
-            <section class="card web-resources">
-                <div class="card-heading">Web Dev Resources</div>
-                <ul>
-                    <li><a href="#">*Dev.to Community</a></li>
-                    <li><a href="#">*Smashing Magazine</a></li>
-                    <li><a href="#">*CSS Tricks</a></li>
-                    <li><a href="#">*W3 Schools</a></li>
-                    <li><a href="#">*Udemy</a></li>
-                </ul>
-            </section>
-        </section>
-    </main>
+  <section class="hero">
+    Welcome to My Site
+  </section>
 
-    <footer>
-        <p>&copy;<span id="currentYear"></span> - Michael Akpan - Nigeria</p>
-        <p>Last Modification: <span id="lastModified"></span></p>
-    </footer>
+  <main>
+    <div class="card">
+      <h2>About This Page</h2>
+      <p>This is a simple HTML and CSS layout that is responsive and clean. You can use it as a base for your personal, project, or portfolio websites.</p>
+    </div>
 
-    <script>
-        // Populate current year dynamically
-        const currentYear = new Date().getFullYear();
-        document.getElementById("currentYear").textContent = currentYear;
+    <div class="card">
+      <h2>Features</h2>
+      <ul>
+        <li>Responsive layout</li>
+        <li>Hero section with background image</li>
+        <li>Styled header, cards, and footer</li>
+      </ul>
+    </div>
+  </main>
 
-        // Display last modification date dynamically
-        const lastModified = new Date(document.lastModified);
-        document.getElementById("lastModified").textContent = `Last Modified: ${lastModified.toLocaleDateString()} ${lastModified.toLocaleTimeString()}`;
-    </script>
+  <footer>
+    &copy; <span id="year"></span> Michael Akpan. All rights reserved.
+  </footer>
+
+  <script>
+    // Dynamically set current year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
 </body>
 </html>
